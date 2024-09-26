@@ -12,35 +12,40 @@ public class Account_01_Register {
     WebDriver driver;
 
     @BeforeClass
-    public void beforeClass(){
+    public void beforeClass() {
         driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.manage().window().maximize();
     }
 
     @Test
-    public void Register_01_Empty_Data(){
+    public void Register_01_Empty_Data() {
+        driver.get("http://localhost/");
 
     }
+
     @Test
-    public void Register_02_Invalid_Email(){
+    public void Register_02_Invalid_Email() {
 
     }
+
     @Test
-    public void Register_03_Invalid_Password(){
+    public void Register_03_Invalid_Password() {
 
     }
+
     @Test
-    public void Register_04_Incorrect_Confirm_Password(){
+    public void Register_04_Incorrect_Confirm_Password() {
 
     }
+
     @Test
-    public void Register_05_Success(){
+    public void Register_05_Success() {
 
     }
 
     @AfterClass
-    public void afterClass(){
+    public void afterClass() {
         driver.quit();
     }
 
