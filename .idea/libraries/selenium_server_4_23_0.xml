@@ -4,6 +4,25 @@
       <root url="jar://$PROJECT_DIR$/libSelenium/selenium-server-4.23.0.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/docs/selenium-java-4.23.0-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/docs/testng-7.10.2-javadoc.jar!/" />
+      <root url="file://$PROJECT_DIR$/sourceDocs" />
+      <root url="jar://$PROJECT_DIR$/sourceDocs/selenium-api-4.23.1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/sourceDocs/selenium-chrome-driver-4.23.1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/sourceDocs/selenium-chromium-driver-4.23.1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/sourceDocs/selenium-devtools-v85-4.23.1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/sourceDocs/selenium-edge-driver-4.23.1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/sourceDocs/selenium-firefox-driver-4.23.1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/sourceDocs/selenium-grid-4.23.1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/sourceDocs/selenium-http-4.23.1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/sourceDocs/selenium-ie-driver-4.23.1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/sourceDocs/selenium-json-4.23.1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/sourceDocs/selenium-manager-4.23.1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/sourceDocs/selenium-os-4.23.1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/sourceDocs/selenium-remote-driver-4.23.1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/sourceDocs/selenium-safari-driver-4.23.1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/sourceDocs/selenium-support-4.23.1-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

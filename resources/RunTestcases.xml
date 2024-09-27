@@ -3,7 +3,7 @@
 
     <test name="Run on Firefox">
             <classes>
-                <class name="com.nopcommerce.account.Account_01_Register">
+                <class name="com.nopcommerce.account.Level02_BasePage_Init">
 
                 </class>
             </classes>

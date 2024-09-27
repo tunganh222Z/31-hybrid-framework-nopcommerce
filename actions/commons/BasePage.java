@@ -12,6 +12,12 @@ import java.util.List;
 import java.util.Set;
 
 public class BasePage {
+
+    //không cần phải khởi tạo đối tượng mà vẫn có thể
+    // truy cập trực tiếp từ phạm vi class
+    public static BasePage getBasePage(){
+        return new BasePage();
+    }
     // Hàm dùng để làm gì
     // Dùng hàm nào của Selenium
     // Kiểu trả về của hàm đó
@@ -20,6 +26,8 @@ public class BasePage {
     // Tên hàm đặt theo tiêu chuẩn camelCase
     // Có tham số hay không tùy vào chức năng cần viết
     // Kiểu dữ liệu trả về cho hàm
+
+
 
 
     public String getCurrentPageUrl(WebDriver driver) {
@@ -42,6 +50,9 @@ public class BasePage {
         driver.navigate().refresh();
     }
 
+    public void openPageURL (WebDriver driver, String URL){
+        driver.get(URL);
+    }
 
     public Alert waitForAlertPresence(WebDriver driver) {
         return new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.alertIsPresent());
