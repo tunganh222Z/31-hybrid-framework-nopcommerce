@@ -15,5 +15,6 @@ public class RegisterPageUI {
     public static final String PASSWORD_ERROR_MSG = "//span[@class='field-validation-error']";
     public static final String CONFIRM_PASSWORD_MSG = "//span[@id='ConfirmPassword-error']";
     public static final String REGISTRATION_COMPLETED_MSG = "//div[@class='result']";
+    public static final String NOPCOMMERCE_LOGO = "//img[@alt='Your store name']";
 
 }

@@ -1,112 +1,159 @@
 package com.nopcommerce.account;
 
-import commons.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import pageObjects.CustomerPageObject;
+import pageObjects.HomePageObject;
+import pageObjects.LoginPageObject;
+import pageObjects.RegisterPageObject;
 
 import java.time.Duration;
 import java.util.Random;
 
-public class Level03_PageObject extends BasePage  {
+public class Level03_PageObject {
     WebDriver driver;
-    // nên che giấu, không nên khởi tạo trực tiếp đối tượng ở trên class test ( Encapsulation )
-    
-
+    private HomePageObject homePage;
+    private RegisterPageObject registerPage;
+    private CustomerPageObject customerPage;
+    private LoginPageObject loginPage;
+    private String emailAddress = getEmailRandom();
 
     @BeforeClass
     public void beforeClass() {
         driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.manage().window().maximize();
+        driver.get("http://localhost/");
+        // Mở ra URL page nào -> khởi tạo nó lên
+        // Từ 1 page này chuyển qua page kia -> Khở tạo page đó lên
+        homePage = new HomePageObject(driver);
     }
 
     @Test
-    public void Register_01_Empty_Data() {
-        openPageURL(driver,"http://localhost/");
-        clickToElement(driver, "//a[@class='ico-register']");
+    public void User_01_Register_Empty_Data() {
+        homePage.clickToRegisterLink();
+        // Từ homepage click registerLink > RegisterPage
+        registerPage = new RegisterPageObject(driver);
+        registerPage.clickToRegisterButton();
 
-        clickToElement(driver, "//button[@id='register-button']");
-
-        Assert.assertEquals(getWebElementText(driver,"//span[@id='FirstName-error']"), "First name is required.");
-        Assert.assertEquals(getWebElementText(driver,"//span[@id='LastName-error']"), "Last name is required.");
-        Assert.assertEquals(getWebElementText(driver,"//span[@id='Email-error']"), "Email is required.");
-        Assert.assertEquals(getWebElementText(driver,"//span[@id='ConfirmPassword-error']"), "Password is required.");
+        Assert.assertEquals(registerPage.getFirstNameErrorMsgText(), "First name is required.");
+        Assert.assertEquals(registerPage.getLastNameErrorMsgText(), "Last name is required.");
+        Assert.assertEquals(registerPage.getEmailErrorMsgText(), "Email is required.");
+        Assert.assertEquals(registerPage.getConfirmPasswordErrorMsgText(), "Password is required.");
     }
 
     @Test
-    public void Register_02_Invalid_Email() {
-        openPageURL(driver,"http://localhost/");
-        clickToElement(driver, "//a[@class='ico-register']");
-        clickToElement(driver, "//button[@id='register-button']");
+    public void User_02_Register_Invalid_Email() {
+        // step cuối cùng của tc01 đang nằm ở registerPage
+        registerPage.clickToNopcommerceLogo();
+        homePage = new HomePageObject(driver);
+        homePage.clickToRegisterLink();
 
-        sendkeyToElement(driver, "//input[@id='FirstName']", "Tung");
-        sendkeyToElement(driver,"//input[@id='LastName']", "Anh");
-        sendkeyToElement(driver,"//input[@id='Email']", "tunganh@gmail@cus");
-        sendkeyToElement(driver,"//input[@id='Password']", "123124214");
-        sendkeyToElement(driver,"//input[@id='ConfirmPassword']", "123124214");
+        registerPage = new RegisterPageObject(driver);
 
-        clickToElement(driver, "//button[@id='register-button']");
+        registerPage.enterToFirstNameTextBox("Tung");
+        registerPage.enterToLastNameTextBox("Anh");
+        registerPage.enterToEmailTextBox("tunganh@gmail@com");
+        registerPage.enterToPasswordTextBox("123");
+        registerPage.enterToConfirmPasswordTextBox("123");
 
-        Assert.assertEquals(getWebElementText(driver,"//span[@id='Email-error']"), "Please enter a valid email address.");
+        registerPage.clickToRegisterButton();
+
+        Assert.assertEquals(registerPage.getEmailErrorMsgText(), "Wrong email");
+    }
+
+    @Test
+    public void User_03_Register_Invalid_Password() {
+        registerPage.clickToNopcommerceLogo();
+        homePage = new HomePageObject(driver);
+        homePage.clickToRegisterLink();
+
+        registerPage = new RegisterPageObject(driver);
+
+        registerPage.enterToFirstNameTextBox("Tung");
+        registerPage.enterToLastNameTextBox("Anh");
+        registerPage.enterToEmailTextBox("tunganh@gmail.com");
+        registerPage.enterToPasswordTextBox("123");
+        registerPage.enterToConfirmPasswordTextBox("123");
+
+        registerPage.clickToRegisterButton();
+
+        Assert.assertEquals(registerPage.getPasswordErrorMsgText(), "<p>must meet the following rules: </p><ul><li>must have at least 6 characters and not greater than 64 characters</li></ul>");
 
     }
 
     @Test
-    public void Register_03_Invalid_Password() {
-        openPageURL(driver,"http://localhost/");
-        clickToElement(driver, "//a[@class='ico-register']");
-        clickToElement(driver, "//button[@id='register-button']");
+    public void User_04_Register_Incorrect_Confirm_Password() {
+        registerPage.clickToNopcommerceLogo();
+        homePage = new HomePageObject(driver);
+        homePage.clickToRegisterLink();
 
-        sendkeyToElement(driver, "//input[@id='FirstName']", "Tung");
-        sendkeyToElement(driver,"//input[@id='LastName']", "Anh");
-        sendkeyToElement(driver,"//input[@id='Email']", "tunganh97@gmail.com");
-        sendkeyToElement(driver,"//input[@id='Password']", "123");
-        sendkeyToElement(driver,"//input[@id='ConfirmPassword']", "123");
+        registerPage = new RegisterPageObject(driver);
 
-        clickToElement(driver, "//button[@id='register-button']");
+        registerPage.enterToFirstNameTextBox("Tung");
+        registerPage.enterToLastNameTextBox("Anh");
+        registerPage.enterToEmailTextBox("tunganh@gmail.com");
+        registerPage.enterToPasswordTextBox("123tunganh");
+        registerPage.enterToConfirmPasswordTextBox("1234tunganh13123");
 
-        Assert.assertEquals(getWebElementText(driver, "//span[@class='field-validation-error']"), "<p>must meet the following rules: </p><ul><li>must have at least 6 characters and not greater than 64 characters</li></ul>");
+        registerPage.clickToRegisterButton();
+
+        Assert.assertEquals(registerPage.getConfirmPasswordErrorMsgText(), "The password and confirmation password do not match.");
+
     }
 
     @Test
-    public void Register_04_Incorrect_Confirm_Password() {
-        openPageURL(driver,"http://localhost/");
-        clickToElement(driver, "//a[@class='ico-register']");
-        clickToElement(driver, "//button[@id='register-button']");
+    public void User_05_Register_Success() {
+        registerPage.clickToNopcommerceLogo();
+        homePage = new HomePageObject(driver);
+        homePage.clickToRegisterLink();
 
-        sendkeyToElement(driver, "//input[@id='FirstName']", "Tung");
-        sendkeyToElement(driver,"//input[@id='LastName']", "Anh");
-        sendkeyToElement(driver,"//input[@id='Email']", "tunganh97@gmail.com");
-        sendkeyToElement(driver,"//input[@id='Password']", "123");
-        sendkeyToElement(driver,"//input[@id='ConfirmPassword']", "1235");
+        registerPage = new RegisterPageObject(driver);
 
-        clickToElement(driver, "//button[@id='register-button']");
+        registerPage.enterToFirstNameTextBox("Tung");
+        registerPage.enterToLastNameTextBox("Anh");
+        registerPage.enterToEmailTextBox(emailAddress);
+        registerPage.enterToPasswordTextBox("123tunganh");
+        registerPage.enterToConfirmPasswordTextBox("123tunganh");
 
-        Assert.assertEquals(getWebElementText(driver, "//span[@id='ConfirmPassword-error']"), "The password and confirmation password do not match.");
+        registerPage.clickToRegisterButton();
+
+        Assert.assertEquals(registerPage.getRegistrationCompletedMsg(), "Your registration completed");
+
+
     }
 
     @Test
-    public void Register_05_Success() {
-        openPageURL(driver,"http://localhost/");
-        clickToElement(driver, "//a[@class='ico-register']");
-        clickToElement(driver, "//button[@id='register-button']");
+    public void User_06_Login_Success() {
+        registerPage.clickToNopcommerceLogo();
 
-        sendkeyToElement(driver, "//input[@id='FirstName']", "Tung");
-        sendkeyToElement(driver,"//input[@id='LastName']", "Anh");
-        sendkeyToElement(driver,"//input[@id='Email']", getEmailRandom());
-        sendkeyToElement(driver,"//input[@id='Password']", "123tunganh");
-        sendkeyToElement(driver,"//input[@id='ConfirmPassword']", "123tunganh");
+        homePage = new HomePageObject(driver);
+        homePage.clickToLoginLink();
 
-        clickToElement(driver, "//button[@id='register-button']");
+        loginPage = new LoginPageObject(driver);
 
-        Assert.assertEquals(getWebElementText(driver,"//div[@class='result']"), "Your registration completed");
+        loginPage.enterToEmailTextbox(emailAddress);
+        loginPage.enterToPasswordTextbox("123tunganh");
+        loginPage.clickToLoginButton();
+        // valid data login > login success > Homepage
+        homePage = new HomePageObject(driver);
+        homePage.clickToMyAccountLink();
+        // -> Customer page
+        customerPage = new CustomerPageObject(driver);
+
+        //verify
+        Assert.assertEquals(customerPage.getFirstNameTextboxAttributeValue(), "Tung");
+        Assert.assertEquals(customerPage.getLastNameTextboxAttributeValue(), "Anh");
+        Assert.assertEquals(customerPage.getEmailAddressTextboxAttributeValue(), emailAddress);
+
+
     }
 
-    public String getEmailRandom(){
+    public String getEmailRandom() {
         return "tunganh97tuaf" + new Random().nextInt(9999) + "@gmail.com";
     }
 
