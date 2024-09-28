@@ -1,10 +1,14 @@
 package com.nopcommerce.account;
 
+import commons.BaseTest;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pageObjects.CustomerPageObject;
 import pageObjects.HomePageObject;
@@ -14,7 +18,7 @@ import pageObjects.RegisterPageObject;
 import java.time.Duration;
 import java.util.Random;
 
-public class Level03_PageObject {
+public class Level04_Multiple_Browser extends BaseTest {
     WebDriver driver;
     private HomePageObject homePage;
     private RegisterPageObject registerPage;
@@ -22,12 +26,12 @@ public class Level03_PageObject {
     private LoginPageObject loginPage;
     private String emailAddress = getEmailRandom();
 
+
+    @Parameters("browser")
     @BeforeClass
-    public void beforeClass() {
-        driver = new FirefoxDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-        driver.manage().window().maximize();
-        driver.get("http://localhost/");
+    public void beforeClass(String browserName) {
+        driver = getBrowserDriver(browserName);
+
         // Mở ra URL page nào -> khởi tạo nó lên
         // Từ 1 page này chuyển qua page kia -> Khở tạo page đó lên
         homePage = new HomePageObject(driver);
@@ -153,13 +157,11 @@ public class Level03_PageObject {
 
     }
 
-    public String getEmailRandom() {
-        return "tunganh97tuaf" + new Random().nextInt(9999) + "@gmail.com";
-    }
+
 
     @AfterClass
     public void afterClass() {
-        driver.quit();
+        closeBrowser();
     }
 
 }

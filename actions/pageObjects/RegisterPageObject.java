@@ -76,4 +76,8 @@ public class RegisterPageObject extends BasePage {
         return getWebElementText(driverPageObject, RegisterPageUI.PASSWORD_ERROR_MSG);
     }
 
+    public void clickToLogOutLink() {
+        waitForElementClickable(driverPageObject, RegisterPageUI.LOGOUT_LINK);
+        clickToElement(driverPageObject, RegisterPageUI.LOGOUT_LINK);
+    }
 }
