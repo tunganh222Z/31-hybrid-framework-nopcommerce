@@ -11,6 +11,8 @@ import pageObject.factory.CustomerPageObject;
 import pageObject.factory.HomePageObject;
 import pageObject.factory.LoginPageObject;
 import pageObject.factory.RegisterPageObject;
+import pageObjects.admin.AdminDashboardPageObject;
+import pageObjects.admin.AdminLoginPageObject;
 
 public class Level06_Selenium_Page_Factory extends BaseTest {
     WebDriver driver;
@@ -19,12 +21,18 @@ public class Level06_Selenium_Page_Factory extends BaseTest {
     private pageObject.factory.CustomerPageObject customerPage;
     private pageObject.factory.LoginPageObject loginPage;
     private String emailAddress = getEmailRandom();
+    private String adminURL, userURL;
+    private AdminLoginPageObject adminLoginPage;
+    private AdminDashboardPageObject adminDashboardPage;
 
 
-    @Parameters("browser")
+    @Parameters({"browser", "adminURL", "userURL"})
     @BeforeClass
-    public void beforeClass(String browserName) {
-        driver = getBrowserDriver(browserName);
+    public void beforeClass(String browserName, String adminURL, String userURL) {
+        driver = getBrowserDriver(browserName,userURL);
+
+        this.adminURL = adminURL;
+        this.userURL = userURL;
 
         homePage = new HomePageObject(driver);
     }

@@ -6,10 +6,10 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import pageObjects.CustomerPageObject;
-import pageObjects.HomePageObject;
-import pageObjects.LoginPageObject;
-import pageObjects.RegisterPageObject;
+import pageObjects.user.CustomerPageObject;
+import pageObjects.user.HomePageObject;
+import pageObjects.user.UserLoginPageObject;
+import pageObjects.user.RegisterPageObject;
 
 import java.time.Duration;
 import java.util.Random;
@@ -19,7 +19,7 @@ public class Level03_PageObject {
     private HomePageObject homePage;
     private RegisterPageObject registerPage;
     private CustomerPageObject customerPage;
-    private LoginPageObject loginPage;
+    private UserLoginPageObject loginPage;
     private String emailAddress = getEmailRandom();
 
     @BeforeClass
@@ -134,7 +134,7 @@ public class Level03_PageObject {
         homePage = new HomePageObject(driver);
         homePage.clickToLoginLink();
 
-        loginPage = new LoginPageObject(driver);
+        loginPage = new UserLoginPageObject(driver);
 
         loginPage.enterToEmailTextbox(emailAddress);
         loginPage.enterToPasswordTextbox("123tunganh");

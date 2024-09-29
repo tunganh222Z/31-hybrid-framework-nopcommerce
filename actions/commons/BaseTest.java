@@ -13,7 +13,9 @@ import java.util.Random;
 public class BaseTest {
     WebDriver driver;
 
-    protected WebDriver getBrowserDriver(String browserName){
+    // thằng này chứa các hàm dùng chung khi test
+
+    protected WebDriver getBrowserDriver(String browserName, String url){
         BrowserList browser = BrowserList.valueOf(browserName.toUpperCase());
         if (browser == BrowserList.FIREFOX){
             driver = new FirefoxDriver();
@@ -31,7 +33,7 @@ public class BaseTest {
         driver.manage().window().setSize(new Dimension(720,720));
         */
         driver.manage().window().maximize();
-        driver.get("http://localhost/");
+        driver.get(url);
         return driver;
     }
 

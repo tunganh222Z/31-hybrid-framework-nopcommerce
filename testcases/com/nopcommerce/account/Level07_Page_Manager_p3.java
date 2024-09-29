@@ -8,24 +8,32 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageObjects.CustomerPageObject;
-import pageObjects.HomePageObject;
-import pageObjects.LoginPageObject;
-import pageObjects.RegisterPageObject;
+import pageObjects.admin.AdminDashboardPageObject;
+import pageObjects.admin.AdminLoginPageObject;
+import pageObjects.user.CustomerPageObject;
+import pageObjects.user.HomePageObject;
+import pageObjects.user.UserLoginPageObject;
+import pageObjects.user.RegisterPageObject;
 
 public class Level07_Page_Manager_p3 extends BaseTest {
     WebDriver driver;
     private HomePageObject homePage;
     private RegisterPageObject registerPage;
     private CustomerPageObject customerPage;
-    private LoginPageObject loginPage;
+    private UserLoginPageObject loginPage;
     private String emailAddress = getEmailRandom();
+    private String adminURL, userURL;
+    private AdminLoginPageObject adminLoginPage;
+    private AdminDashboardPageObject adminDashboardPage;
 
 
-    @Parameters("browser")
+    @Parameters({"browser", "adminURL", "userURL"})
     @BeforeClass
-    public void beforeClass(String browserName) {
-        driver = getBrowserDriver(browserName);
+    public void beforeClass(String browserName, String adminURL, String userURL) {
+        driver = getBrowserDriver(browserName,userURL);
+
+        this.adminURL = adminURL;
+        this.userURL = userURL;
 
         PageGenratorManager.getHomePage(driver);
         // Mở ra URL page nào -> khởi tạo nó lên

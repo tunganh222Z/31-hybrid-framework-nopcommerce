@@ -10,17 +10,17 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pageObjects.admin.AdminDashboardPageObject;
 import pageObjects.admin.AdminLoginPageObject;
-import pageObjects.user.CustomerPageObject;
-import pageObjects.user.HomePageObject;
-import pageObjects.user.UserLoginPageObject;
-import pageObjects.user.RegisterPageObject;
+import pageObjects.user.*;
 
-public class Level08_Switch_Page extends BaseTest {
+public class Level09_Page_Navigation extends BaseTest {
     WebDriver driver;
     private HomePageObject homePage;
     private RegisterPageObject registerPage;
     private CustomerPageObject customerPage;
     private UserLoginPageObject loginPage;
+    private AddressPageObject addressPage;
+    private RewardPointPageObject rewardPage;
+    private OrderPageObject orderPage;
     private String emailAddress = getEmailRandom();
     private String adminURL, userURL;
     private AdminLoginPageObject adminLoginPage;
@@ -34,8 +34,6 @@ public class Level08_Switch_Page extends BaseTest {
 
         this.adminURL = adminURL;
         this.userURL = userURL;
-
-        PageGenratorManager.getHomePage(driver);
         // Mở ra URL page nào -> khởi tạo nó lên
         // Từ 1 page này chuyển qua page kia -> Khở tạo page đó lên
 
@@ -81,6 +79,15 @@ public class Level08_Switch_Page extends BaseTest {
 
     @Test
     public void User_03_Switch_Page(){
+        // Các page này cùng kế thừa MyAccountSideBarPageObject
+        // Cho nên khi switch case gọi như này sẽ không sai bussiness
+        // nếu cố tình gọi sai thì trong quá trình compile code sẽ báo luôn
+        // Customer Page -> Address page
+        addressPage = customerPage.openAddressPage();
+
+        orderPage = addressPage.openOrderPage();
+
+        customerPage = orderPage.openCustomerPage();
 
     }
 

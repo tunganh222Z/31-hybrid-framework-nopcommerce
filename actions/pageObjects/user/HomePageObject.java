@@ -1,10 +1,9 @@
-package pageObjects;
+package pageObjects.user;
 
 import commons.BasePage;
 import commons.PageGenratorManager;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.devtools.v85.page.Page;
-import pageUIs.HomePageUI;
+import pageUIs.user.HomePageUI;
 
 public class HomePageObject extends BasePage {
     // Khai báo driverPageObject -> vẫn là null chưa khởi tạo
@@ -24,10 +23,10 @@ public class HomePageObject extends BasePage {
         return PageGenratorManager.getRegisterPage(driverPageObject);
     }
 
-    public LoginPageObject clickToLoginLink() {
+    public UserLoginPageObject clickToLoginLink() {
         waitForElementClickable(driverPageObject, HomePageUI.LOGIN_LINK);
         clickToElement(driverPageObject, HomePageUI.LOGIN_LINK);
-        return PageGenratorManager.getLoginPage(driverPageObject);
+        return PageGenratorManager.getUserLoginPage(driverPageObject);
     }
 
     public CustomerPageObject clickToMyAccountLink() {

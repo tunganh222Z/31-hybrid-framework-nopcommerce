@@ -10,17 +10,17 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pageObjects.admin.AdminDashboardPageObject;
 import pageObjects.admin.AdminLoginPageObject;
-import pageObjects.user.CustomerPageObject;
-import pageObjects.user.HomePageObject;
-import pageObjects.user.UserLoginPageObject;
-import pageObjects.user.RegisterPageObject;
+import pageObjects.user.*;
 
-public class Level08_Switch_Page extends BaseTest {
+public class Level10_Switch_Role extends BaseTest {
     WebDriver driver;
     private HomePageObject homePage;
     private RegisterPageObject registerPage;
     private CustomerPageObject customerPage;
     private UserLoginPageObject loginPage;
+    private AddressPageObject addressPage;
+    private RewardPointPageObject rewardPage;
+    private OrderPageObject orderPage;
     private String emailAddress = getEmailRandom();
     private String adminURL, userURL;
     private AdminLoginPageObject adminLoginPage;
@@ -35,15 +35,14 @@ public class Level08_Switch_Page extends BaseTest {
         this.adminURL = adminURL;
         this.userURL = userURL;
 
-        PageGenratorManager.getHomePage(driver);
+        homePage = PageGenratorManager.getHomePage(driver);
         // Mở ra URL page nào -> khởi tạo nó lên
         // Từ 1 page này chuyển qua page kia -> Khở tạo page đó lên
 
     }
 
     @Test
-    public void User_01_Register_Success() {
-        homePage = registerPage.clickToNopcommerceLogo();
+    public void User_01_User_To_Admin() {
         registerPage = homePage.clickToRegisterLink();
 
         registerPage.enterToFirstNameTextBox("Tung");
@@ -56,11 +55,6 @@ public class Level08_Switch_Page extends BaseTest {
 
         Assert.assertEquals(registerPage.getRegistrationCompletedMsg(), "Your registration completed");
 
-
-    }
-
-    @Test
-    public void User_02_Login_Success() {
         homePage = registerPage.clickToLogOutLink();
 
         loginPage = homePage.clickToLoginLink();
@@ -71,18 +65,28 @@ public class Level08_Switch_Page extends BaseTest {
         homePage = loginPage.clickToLoginButton();
         // valid data login > login success > Homepage
         customerPage = homePage.clickToMyAccountLink();
-        // -> Customer page
+        // Homepage user -> login page admin
+        homePage.openPageURL(driver, this.adminURL);
 
-        //verify
-        Assert.assertEquals(customerPage.getFirstNameTextboxAttributeValue(), "Tung");
-        Assert.assertEquals(customerPage.getLastNameTextboxAttributeValue(), "Anh");
-        Assert.assertEquals(customerPage.getEmailAddressTextboxAttributeValue(), emailAddress);
+        adminLoginPage = PageGenratorManager.getAdminLoginPage(driver);
+
+        adminLoginPage.enterToEmailTextbox("tunganh@automationfc.com");
+        adminLoginPage.enterToPasswordTextbox("tunganh@automationfc.com");
+        adminDashboardPage = adminLoginPage.clickToLoginButton();
+
     }
 
     @Test
-    public void User_03_Switch_Page(){
+    public void User_02_Admin_To_User() {
+        homePage = adminDashboardPage.clickToLogOutLink();
+        // -> homePage user -> Login Admin -> Login User
+        homePage.openPageURL(driver,this.adminURL);
+        PageGenratorManager.getAdminLoginPage(driver);
+        adminLoginPage.openPageURL(driver,this.userURL);
+        PageGenratorManager.getHomePage(driver);
 
     }
+
 
 
 
