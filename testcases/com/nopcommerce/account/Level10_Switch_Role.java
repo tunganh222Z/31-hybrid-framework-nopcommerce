@@ -1,6 +1,7 @@
 package com.nopcommerce.account;
 
 import commons.BaseTest;
+import commons.GlobalConstant;
 import commons.PageGenratorManager;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -70,8 +71,8 @@ public class Level10_Switch_Role extends BaseTest {
 
         adminLoginPage = PageGenratorManager.getAdminLoginPage(driver);
 
-        adminLoginPage.enterToEmailTextbox("tunganh@automationfc.com");
-        adminLoginPage.enterToPasswordTextbox("tunganh@automationfc.com");
+        adminLoginPage.enterToEmailTextbox(GlobalConstant.ADMIN_USERNAME);
+        adminLoginPage.enterToPasswordTextbox(GlobalConstant.ADMIN_PASSWORD);
         adminDashboardPage = adminLoginPage.clickToLoginButton();
 
     }
