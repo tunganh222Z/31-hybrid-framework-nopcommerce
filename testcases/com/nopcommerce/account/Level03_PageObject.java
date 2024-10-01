@@ -6,10 +6,10 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import pageObjects.user.CustomerPageObject;
-import pageObjects.user.HomePageObject;
-import pageObjects.user.UserLoginPageObject;
-import pageObjects.user.RegisterPageObject;
+import pageObjects.nopcommerce.user.CustomerPageObject;
+import pageObjects.nopcommerce.user.HomePageObject;
+import pageObjects.nopcommerce.user.UserLoginPageObject;
+import pageObjects.nopcommerce.user.RegisterPageObject;
 
 import java.time.Duration;
 import java.util.Random;

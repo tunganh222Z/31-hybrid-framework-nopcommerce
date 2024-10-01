@@ -1,9 +1,9 @@
-package pageObjects.user;
+package pageObjects.nopcommerce.user;
 
 import commons.BasePage;
 import commons.PageGenratorManager;
 import org.openqa.selenium.WebDriver;
-import pageUIs.user.HomePageUI;
+import pageUIs.nopcommerce.user.HomePageUI;
 
 public class HomePageObject extends BasePage {
     // Khai báo driverPageObject -> vẫn là null chưa khởi tạo

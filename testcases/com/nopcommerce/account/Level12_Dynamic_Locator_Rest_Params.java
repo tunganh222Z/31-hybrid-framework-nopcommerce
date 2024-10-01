@@ -1,6 +1,5 @@
 package com.nopcommerce.account;
 
-import commons.BasePage;
 import commons.BaseTest;
 import commons.PageGenratorManager;
 import org.openqa.selenium.WebDriver;
@@ -9,9 +8,9 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageObjects.admin.AdminDashboardPageObject;
-import pageObjects.admin.AdminLoginPageObject;
-import pageObjects.user.*;
+import pageObjects.nopcommerce.admin.AdminDashboardPageObject;
+import pageObjects.nopcommerce.admin.AdminLoginPageObject;
+import pageObjects.nopcommerce.user.*;
 
 public class Level12_Dynamic_Locator_Rest_Params extends BaseTest {
     WebDriver driver;
@@ -84,13 +83,13 @@ public class Level12_Dynamic_Locator_Rest_Params extends BaseTest {
         // Cho nên khi switch case gọi như này sẽ không sai bussiness
         // nếu cố tình gọi sai thì trong quá trình compile code sẽ báo luôn
         // Customer Page -> Address page
-//        addressPage = (AddressPageObject) customerPage.openDynamicSideBar("Addresses");
-//
-//        orderPage = (OrderPageObject) addressPage.openDynamicSideBar("Orders");
-//
-//        addressPage = (AddressPageObject) orderPage.openDynamicSideBar("Addresses");
-//
-//        customerPage = (CustomerPageObject) orderPage.openDynamicSideBar("Customer info");
+        addressPage = (AddressPageObject) customerPage.openDynamicSideBar("Addresses");
+
+        orderPage = (OrderPageObject) addressPage.openDynamicSideBar("Orders");
+
+        addressPage = (AddressPageObject) orderPage.openDynamicSideBar("Addresses");
+
+        customerPage = (CustomerPageObject) orderPage.openDynamicSideBar("Customer info");
 
         //orderPage = (OrderPageObject) customerPage.openDynamicSideBar("Orders");
 
@@ -102,11 +101,11 @@ public class Level12_Dynamic_Locator_Rest_Params extends BaseTest {
         // Cho nên khi switch case gọi như này sẽ không sai bussiness
         // nếu cố tình gọi sai thì trong quá trình compile code sẽ báo luôn
         // Customer Page -> Address page
-        customerPage.openDynamicSideBarByName("Addresses");
-        addressPage = PageGenratorManager.getAddressPage(driver);
-
-        addressPage.openDynamicSideBarByName("Orders");
-        orderPage = PageGenratorManager.getOrderPage(driver);
+//        customerPage.openDynamicSideBarByName("Addresses");
+//        addressPage = PageGenratorManager.getAddressPage(driver);
+//
+//        addressPage.openDynamicSideBarByName("Orders");
+//        orderPage = PageGenratorManager.getOrderPage(driver);
 
 
     }

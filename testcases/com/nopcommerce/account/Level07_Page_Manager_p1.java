@@ -7,12 +7,12 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageObjects.admin.AdminDashboardPageObject;
-import pageObjects.admin.AdminLoginPageObject;
-import pageObjects.user.CustomerPageObject;
-import pageObjects.user.HomePageObject;
-import pageObjects.user.UserLoginPageObject;
-import pageObjects.user.RegisterPageObject;
+import pageObjects.nopcommerce.admin.AdminDashboardPageObject;
+import pageObjects.nopcommerce.admin.AdminLoginPageObject;
+import pageObjects.nopcommerce.user.CustomerPageObject;
+import pageObjects.nopcommerce.user.HomePageObject;
+import pageObjects.nopcommerce.user.UserLoginPageObject;
+import pageObjects.nopcommerce.user.RegisterPageObject;
 
 public class Level07_Page_Manager_p1 extends BaseTest {
     WebDriver driver;

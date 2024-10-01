@@ -1,7 +1,7 @@
-package pageObjects.user;
+package pageObjects.nopcommerce.user;
 
 import org.openqa.selenium.WebDriver;
-import pageUIs.user.CustomerPageUI;
+import pageUIs.nopcommerce.user.CustomerPageUI;
 
 public class CustomerPageObject extends MyAccountSideBarPageObject {
     WebDriver driverPageObject;

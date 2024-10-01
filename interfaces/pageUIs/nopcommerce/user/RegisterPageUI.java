@@ -1,4 +1,4 @@
-package pageUIs.user;
+package pageUIs.nopcommerce.user;
 
 public class RegisterPageUI {
     // define duy nhất 1 lần ở đây không trùng lặp chỗ khác

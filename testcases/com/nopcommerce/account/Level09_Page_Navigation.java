@@ -1,16 +1,15 @@
 package com.nopcommerce.account;
 
 import commons.BaseTest;
-import commons.PageGenratorManager;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageObjects.admin.AdminDashboardPageObject;
-import pageObjects.admin.AdminLoginPageObject;
-import pageObjects.user.*;
+import pageObjects.nopcommerce.admin.AdminDashboardPageObject;
+import pageObjects.nopcommerce.admin.AdminLoginPageObject;
+import pageObjects.nopcommerce.user.*;
 
 public class Level09_Page_Navigation extends BaseTest {
     WebDriver driver;

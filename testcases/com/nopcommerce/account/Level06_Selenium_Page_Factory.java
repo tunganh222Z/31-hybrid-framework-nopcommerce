@@ -11,8 +11,8 @@ import pageObject.factory.CustomerPageObject;
 import pageObject.factory.HomePageObject;
 import pageObject.factory.LoginPageObject;
 import pageObject.factory.RegisterPageObject;
-import pageObjects.admin.AdminDashboardPageObject;
-import pageObjects.admin.AdminLoginPageObject;
+import pageObjects.nopcommerce.admin.AdminDashboardPageObject;
+import pageObjects.nopcommerce.admin.AdminLoginPageObject;
 
 public class Level06_Selenium_Page_Factory extends BaseTest {
     WebDriver driver;

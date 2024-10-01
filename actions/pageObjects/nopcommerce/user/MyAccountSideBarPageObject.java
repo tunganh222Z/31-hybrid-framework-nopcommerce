@@ -1,9 +1,9 @@
-package pageObjects.user;
+package pageObjects.nopcommerce.user;
 
 import commons.BasePage;
 import commons.PageGenratorManager;
 import org.openqa.selenium.WebDriver;
-import pageUIs.user.MyAccountSideBarPageUI;
+import pageUIs.nopcommerce.user.MyAccountSideBarPageUI;
 
 public class MyAccountSideBarPageObject extends BasePage {
     WebDriver driver;
@@ -37,10 +37,11 @@ public class MyAccountSideBarPageObject extends BasePage {
     }
 
     public MyAccountSideBarPageObject openDynamicSideBar (String pageName){
+        sleepInSecond(1);
         waitForElementClickable(driver, MyAccountSideBarPageUI.DYNAMIC_SIDEBAR_LINK_TEXT, pageName);
         clickToElement(driver, MyAccountSideBarPageUI.DYNAMIC_SIDEBAR_LINK_TEXT, pageName);
         switch (pageName){
-            case "Customer infor":
+            case "Customer info":
                 return  PageGenratorManager.getCustomerPage(driver);
             case "Addresses":
                 return PageGenratorManager.getAddressPage(driver);
@@ -53,6 +54,7 @@ public class MyAccountSideBarPageObject extends BasePage {
         }
     }
     public void openDynamicSideBarByName (String pageName) {
+        sleepInSecond(1);
         waitForElementClickable(driver, MyAccountSideBarPageUI.DYNAMIC_SIDEBAR_LINK_TEXT, pageName);
         clickToElement(driver, MyAccountSideBarPageUI.DYNAMIC_SIDEBAR_LINK_TEXT, pageName);
     }

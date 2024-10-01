@@ -1,4 +1,4 @@
-package pageUIs.user;
+package pageUIs.nopcommerce.user;
 
 public class RewardPointPageUI {
 }

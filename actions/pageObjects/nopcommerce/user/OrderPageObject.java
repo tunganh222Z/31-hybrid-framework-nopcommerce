@@ -1,11 +1,11 @@
-package pageObjects.user;
+package pageObjects.nopcommerce.user;
 
 import org.openqa.selenium.WebDriver;
 
-public class AddressPageObject extends MyAccountSideBarPageObject{
+public class OrderPageObject extends MyAccountSideBarPageObject{
     WebDriver driverPageObject;
 
-    public AddressPageObject(WebDriver driverPageObject) {
+    public OrderPageObject(WebDriver driverPageObject) {
         super(driverPageObject);
         this.driverPageObject = driverPageObject;
     }

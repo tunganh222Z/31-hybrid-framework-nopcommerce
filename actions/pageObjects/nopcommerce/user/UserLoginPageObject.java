@@ -1,9 +1,9 @@
-package pageObjects.user;
+package pageObjects.nopcommerce.user;
 
 import commons.BasePage;
 import commons.PageGenratorManager;
 import org.openqa.selenium.WebDriver;
-import pageUIs.user.UserLoginPageUI;
+import pageUIs.nopcommerce.user.UserLoginPageUI;
 
 public class UserLoginPageObject extends BasePage {
     WebDriver driverPageObject;
