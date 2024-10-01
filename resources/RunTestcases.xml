@@ -6,7 +6,7 @@
         <parameter name="adminURL" value="http://localhost/login?ReturnUrl=%2FAdmin"/>
         <parameter name="userURL" value="http://localhost/"/>
             <classes>
-                <class name="com.nopcommerce.account.Level10_Switch_Role"/>
+                <class name="com.nopcommerce.account.Level12_Dynamic_Locator_Rest_Params"/>
             </classes>
     </test>
 
