@@ -135,8 +135,16 @@ public class BasePage {
         return driver.findElements(getByLocator(locator));
     }
 
+    public List<WebElement> getListWebElements(WebDriver driver, String locator, String... restParams) {
+        return driver.findElements(getByLocator(getDynamicLocator(locator, restParams)));
+    }
+
     public int getListElementsSize(WebDriver driver, String locator) {
         return getListWebElements(driver, locator).size();
+    }
+
+    public int getListElementsSize(WebDriver driver, String locator, String... restParam) {
+        return getListWebElements(driver, getDynamicLocator(locator,restParam)).size();
     }
 
     public void clickToElement(WebDriver driver, String locator) {
@@ -161,6 +169,11 @@ public class BasePage {
 
     public void selectItemInDefaultDropdown(WebDriver driver, String locator, String itemValue) {
         new Select(getWebElement(driver, locator)).selectByVisibleText(itemValue);
+        //Select tunganh = new Select(driver.findElement(By.xpath(""))).selectByVisibleText();
+    }
+
+    public void selectItemInDefaultDropdown(WebDriver driver, String locator, String itemValue, String... restParams) {
+        new Select(getWebElement(driver, getDynamicLocator(locator, restParams))).selectByVisibleText(itemValue);
     }
 
     public String getFirstSelectedTextInDefaultDropdown(WebDriver driver, String locator) {
