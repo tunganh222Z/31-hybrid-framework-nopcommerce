@@ -1,9 +1,7 @@
 package com.jquery.table;
 
-import commons.BaseTest;
 import commons.BaseTestJQuery;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -14,7 +12,7 @@ import pageObjects.jquery.PageGeneratorManager;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TC_01_Handle_DataTable extends BaseTestJQuery {
+public class Level13_Handle_DataTable extends BaseTestJQuery {
     WebDriver driver;
     private HomePageObject homePage;
     List<String> allValueUI = new ArrayList<String>();

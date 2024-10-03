@@ -2,20 +2,18 @@ package com.jquery.upload;
 
 import commons.BaseTestJQuery;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.devtools.v85.page.Page;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageObjects.jquery.HomePageObject;
 import pageObjects.jquery.PageGeneratorManager;
 import pageObjects.jquery.UploadPageObject;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class TC_01_Upload_File extends BaseTestJQuery {
+public class Level14_Upload_Files extends BaseTestJQuery {
     WebDriver driver;
     private UploadPageObject uploadPage;
     List<String> allValueUI = new ArrayList<String>();
