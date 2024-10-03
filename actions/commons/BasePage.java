@@ -7,7 +7,9 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pageUIs.nopcommerce.user.BasePageUI;
 
+import java.io.File;
 import java.time.Duration;
 import java.util.List;
 import java.util.Set;
@@ -149,6 +151,11 @@ public class BasePage {
 
     public void clickToElement(WebDriver driver, String locator) {
         getWebElement(driver, locator).click();
+    }
+
+    public void clickToListElements(WebDriver driver, WebElement webElement){
+        new WebDriverWait(driver, Duration.ofSeconds(15)).until(ExpectedConditions.elementToBeClickable(webElement));
+        webElement.click();
     }
 
     public void clickToElement(WebDriver driver, String locator, String... restParams) {
@@ -399,11 +406,20 @@ public class BasePage {
         new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.elementToBeClickable(getByLocator(locator)));
     }
 
+
     public void waitForElementClickable(WebDriver driver, String locator, String... restParams) {
         new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.elementToBeClickable(getByLocator(getDynamicLocator(locator, restParams))));
     }
 
-
+    public void uploadMultipleFiles (WebDriver driver, String... fileNames){
+        String filePath = GlobalConstant.UPLOAD_PATH;
+        String fullFileName = "";
+        for (String file : fileNames){
+            fullFileName = fullFileName +filePath + file + "\n";
+        }
+        fullFileName = fullFileName.trim();
+        getWebElement(driver, BasePageUI.UPLOAD_FILE_TYPE).sendKeys(fullFileName);
+    }
 
 }
 

@@ -5,7 +5,7 @@
         <parameter name="browser" value="firefox"/>
         <parameter name="url" value="https://www.jqueryscript.net/demo/CRUD-Data-Grid-Plugin-jQuery-Quickgrid/"/>
             <classes>
-                <class name="com.jquery.table.TC_01_Handle_DataTable"/>
+                <class name="com.jquery.upload.TC_01_Upload_File"/>
             </classes>
     </test>
 
