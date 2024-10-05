@@ -41,18 +41,29 @@ public class Level15_Assert_Verify extends BaseTest {
     }
 
     @Test
-    public void User_01_Register_Success() {
+    public void User_01_Register_Empty_Data() {
+
         registerPage = homePage.clickToRegisterLink();
 
-        registerPage.enterToFirstNameTextBox("Tung");
-        registerPage.enterToLastNameTextBox("Anh");
-        registerPage.enterToEmailTextBox(emailAddress);
-        registerPage.enterToPasswordTextBox("123tunganh");
-        registerPage.enterToConfirmPasswordTextBox("123tunganh");
+        log.info("User_01_Register_Empty_Data - STEP 01: Open Register page");
+        homePage.clickToRegisterLink();
 
+        // Từ homepage click registerLink > RegisterPage
+        registerPage = new RegisterPageObject(driver);
+
+        log.info("User_01_Register_Empty_Data - STEP 02: Click to Register button");
         registerPage.clickToRegisterButton();
 
-        Assert.assertEquals(registerPage.getRegistrationCompletedMsg(), "Your registration completed");
+        log.info("User_01_Register_Empty_Data - STEP 03: Verify first name error msg");
+        Assert.assertEquals(registerPage.getFirstNameErrorMsgText(), "First NAME is required.");
+
+        log.info("User_01_Register_Empty_Data - STEP 04: Verify LastName error msg");
+        Assert.assertEquals(registerPage.getLastNameErrorMsgText(), "Last name is requir3ed.");
+
+        log.info("User_01_Register_Empty_Data - STEP 05: Verify Email error msg");
+        Assert.assertEquals(registerPage.getEmailErrorMsgText(), "Email is required.");
+
+        Assert.assertEquals(registerPage.getConfirmPasswordErrorMsgText(), "Password is required.");
 
 
     }
