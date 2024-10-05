@@ -17,6 +17,7 @@
     <orderEntry type="library" name="selenium-firefox-driver-4.23.0-sources" level="project" />
     <orderEntry type="library" name="selenium-server-4.23.0" level="project" />
     <orderEntry type="library" name="testng-7.10.2" level="project" />
-    <orderEntry type="library" name="log4Jv1" level="project" />
+    <orderEntry type="library" name="log4jV2" level="project" />
+    <orderEntry type="library" name="ReportNG" level="project" />
   </component>
 </module>

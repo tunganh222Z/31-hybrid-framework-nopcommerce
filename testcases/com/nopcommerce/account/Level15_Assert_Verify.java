@@ -68,64 +68,9 @@ public class Level15_Assert_Verify extends BaseTest {
 
     }
 
-    @Test
-    public void User_02_Login_Success() {
-        homePage = registerPage.clickToLogOutLink();
-
-        loginPage = homePage.clickToLoginLink();
-
-
-        loginPage.enterToEmailTextbox(emailAddress);
-        loginPage.enterToPasswordTextbox("123tunganh");
-        homePage = loginPage.clickToLoginButton();
-        // valid data login > login success > Homepage
-        customerPage = homePage.clickToMyAccountLink();
-        // -> Customer page
-
-        //verify
-        Assert.assertEquals(customerPage.getFirstNameTextboxAttributeValue(), "Tung");
-        Assert.assertEquals(customerPage.getLastNameTextboxAttributeValue(), "Anh");
-        Assert.assertEquals(customerPage.getEmailAddressTextboxAttributeValue(), emailAddress);
-    }
-
-    @Test
-    public void User_03_Switch_Page(){
-        // Các page này cùng kế thừa MyAccountSideBarPageObject
-        // Cho nên khi switch case gọi như này sẽ không sai bussiness
-        // nếu cố tình gọi sai thì trong quá trình compile code sẽ báo luôn
-        // Customer Page -> Address page
-        addressPage = (AddressPageObject) customerPage.openDynamicSideBar("Addresses");
-
-        orderPage = (OrderPageObject) addressPage.openDynamicSideBar("Orders");
-
-        addressPage = (AddressPageObject) orderPage.openDynamicSideBar("Addresses");
-
-        customerPage = (CustomerPageObject) orderPage.openDynamicSideBar("Customer info");
-
-        //orderPage = (OrderPageObject) customerPage.openDynamicSideBar("Orders");
-
-    }
-
-    @Test
-    public void User_04_Switch_Page(){
-        // Các page này cùng kế thừa MyAccountSideBarPageObject
-        // Cho nên khi switch case gọi như này sẽ không sai bussiness
-        // nếu cố tình gọi sai thì trong quá trình compile code sẽ báo luôn
-        // Customer Page -> Address page
-//        customerPage.openDynamicSideBarByName("Addresses");
-//        addressPage = PageGenratorManager.getAddressPage(driver);
-//
-//        addressPage.openDynamicSideBarByName("Orders");
-//        orderPage = PageGenratorManager.getOrderPage(driver);
-
-
-    }
-
-
-
     @AfterClass
     public void afterClass() {
-       // closeBrowser();
+       closeBrowser();
     }
 
 }

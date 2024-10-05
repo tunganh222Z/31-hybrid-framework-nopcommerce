@@ -1,7 +1,7 @@
 package commons;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
@@ -17,10 +17,10 @@ import java.util.Random;
 
 public class BaseTest {
     WebDriver driver;
-    protected final Log log;
+    protected final Logger log;
 
     public BaseTest(){
-        log = LogFactory.getLog(getClass());
+        log = LogManager.getLogger(getClass());
     }
 
     // thằng này chứa các hàm dùng chung khi test
@@ -97,5 +97,9 @@ public class BaseTest {
             Reporter.getCurrentTestResult().setThrowable(e);
         }
         return status;
+    }
+
+    public WebDriver getDriver() {
+        return driver;
     }
 }
