@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
+import org.testng.Reporter;
 
 import java.time.Duration;
 import java.util.Random;
@@ -45,5 +47,44 @@ public class BaseTest {
         if (!(driver == null)){
             driver.quit();
         }
+    }
+
+    protected boolean verifyTrue(boolean condition){
+        boolean status = true;
+        try{
+            Assert.assertTrue(condition);
+        } catch (Throwable e) { // Phải dùng Throwable thì sẽ không dùng lại, Exception sẽ dừng lại khi không thỏa mãn
+            status = false;
+
+            VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
+            Reporter.getCurrentTestResult().setThrowable(e);
+        }
+        return status;
+    }
+
+    protected Boolean verifyFalse(boolean condition){
+        boolean status = true;
+        try{
+            Assert.assertFalse(condition);
+        } catch (Throwable e) { // Phải dùng Throwable thì sẽ không dùng lại, Exception sẽ dừng lại khi không thỏa mãn
+            status = false;
+
+            VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
+            Reporter.getCurrentTestResult().setThrowable(e);
+        }
+        return status;
+    }
+
+    protected boolean verifyEqual(Object actual, Object expected){
+        boolean status = true;
+        try{
+            Assert.assertEquals(actual, expected);
+        } catch (Throwable e) { // Phải dùng Throwable thì sẽ không dùng lại, Exception sẽ dừng lại khi không thỏa mãn
+            status = false;
+
+            VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
+            Reporter.getCurrentTestResult().setThrowable(e);
+        }
+        return status;
     }
 }
