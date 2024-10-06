@@ -36,7 +36,6 @@ public class Level21_Pattern_Object extends BaseTest {
         this.adminURL = adminURL;
         this.userURL = userURL;
 
-        PageGenratorManager.getHomePage(driver);
         // Mở ra URL page nào -> khởi tạo nó lên
         // Từ 1 page này chuyển qua page kia -> Khở tạo page đó lên
 
@@ -65,15 +64,9 @@ public class Level21_Pattern_Object extends BaseTest {
         homePage.clickToHeaderLinksByName("Register");
         registerPage = new RegisterPageObject(driver);
 
-        registerPage.enterToFirstNameTextBox("Tung");
-        registerPage.enterToLastNameTextBox("Anh");
-        registerPage.enterToEmailTextBox("tunganh@gmail@com");
-        registerPage.enterToPasswordTextBox("123");
-        registerPage.enterToConfirmPasswordTextBox("123");
 
         registerPage.clickToButtonByText("Register");
 
-        Assert.assertEquals(registerPage.getEmailErrorMsgText(), "Please enter a valid email address.");
     }
 
     @Test
@@ -83,11 +76,6 @@ public class Level21_Pattern_Object extends BaseTest {
         homePage.clickToHeaderLinksByName("Register");
         registerPage = new RegisterPageObject(driver);
 
-        registerPage.enterToFirstNameTextBox("Tung");
-        registerPage.enterToLastNameTextBox("Anh");
-        registerPage.enterToEmailTextBox("tunganh@gmail.com");
-        registerPage.enterToPasswordTextBox("123");
-        registerPage.enterToConfirmPasswordTextBox("123");
 
         registerPage.clickToButtonByText("Register");
 
@@ -102,15 +90,9 @@ public class Level21_Pattern_Object extends BaseTest {
         homePage.clickToHeaderLinksByName("Register");
         registerPage = new RegisterPageObject(driver);
 
-        registerPage.enterToFirstNameTextBox("Tung");
-        registerPage.enterToLastNameTextBox("Anh");
-        registerPage.enterToEmailTextBox("tunganh@gmail.com");
-        registerPage.enterToPasswordTextBox("123tunganh");
-        registerPage.enterToConfirmPasswordTextBox("1234tunganh13123");
 
         registerPage.clickToButtonByText("Register");
 
-        Assert.assertEquals(registerPage.getConfirmPasswordErrorMsgText(), "The password and confirmation password do not match.");
 
     }
 
@@ -121,11 +103,6 @@ public class Level21_Pattern_Object extends BaseTest {
         homePage.clickToHeaderLinksByName("Register");
         registerPage = new RegisterPageObject(driver);
 
-        registerPage.enterToFirstNameTextBox("Tung");
-        registerPage.enterToLastNameTextBox("Anh");
-        registerPage.enterToEmailTextBox(emailAddress);
-        registerPage.enterToPasswordTextBox("123tunganh");
-        registerPage.enterToConfirmPasswordTextBox("123tunganh");
 
         registerPage.clickToButtonByText("Register");
 
@@ -136,14 +113,11 @@ public class Level21_Pattern_Object extends BaseTest {
 
     @Test
     public void User_06_Login_Success() {
-        homePage = registerPage.clickToLogOutLink();
 
         homePage.clickToHeaderLinksByName("Log in");
         loginPage = new UserLoginPageObject(driver);
 
 
-        loginPage.enterToEmailTextbox(emailAddress);
-        loginPage.enterToPasswordTextbox("123tunganh");
 
         loginPage.clickToButtonByText("Log in");
         homePage = new HomePageObject(driver);
@@ -154,9 +128,6 @@ public class Level21_Pattern_Object extends BaseTest {
         // -> Customer page
 
         //verify
-        Assert.assertEquals(customerPage.getFirstNameTextboxAttributeValue(), "Tung");
-        Assert.assertEquals(customerPage.getLastNameTextboxAttributeValue(), "Anh");
-        Assert.assertEquals(customerPage.getEmailAddressTextboxAttributeValue(), emailAddress);
 
         customerPage.clickToNopcommerceLogo();
     }

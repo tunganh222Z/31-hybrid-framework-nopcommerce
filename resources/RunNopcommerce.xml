@@ -13,7 +13,7 @@
         <parameter name="adminURL" value="http://localhost/login?ReturnUrl=%2FAdmin"/>
         <parameter name="userURL" value="http://localhost/"/>
             <classes>
-                <class name="com.nopcommerce.account.Level15_Assert_Verify"/>
+                <class name="com.nopcommerce.account.Level21_Pattern_Object"/>
             </classes>
     </test>
 

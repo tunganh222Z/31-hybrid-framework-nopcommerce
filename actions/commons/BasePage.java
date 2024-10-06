@@ -382,6 +382,10 @@ public class BasePage {
         return (String) ((JavascriptExecutor) driver).executeScript("return arguments[0].getAttribute('" + attributeName + "');", getWebElement(driver, locator));
     }
 
+    public String getAttributeInDOM(WebDriver driver, String locator, String attributeName, String... restParams) {
+        return (String) ((JavascriptExecutor) driver).executeScript("return arguments[0].getAttribute('" + attributeName + "');", getWebElement(driver, getDynamicLocator(locator, restParams)));
+    }
+
     public String getWebElementValidationMessage(WebDriver driver, String locator) {
         return (String) ((JavascriptExecutor) driver).executeScript("return arguments[0].validationMessage;", getWebElement(driver, locator));
     }
