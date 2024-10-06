@@ -33,4 +33,12 @@ public class BaseElements extends BasePage{
         waitForElementVisible(driver, BaseElementsUI.DYNAMIC_ERROR_MSG, id);
         return getWebElementText(driver, BaseElementsUI.DYNAMIC_ERROR_MSG, id);
     }
+
+    public void enterToTextBoxByID(String firstName, String tung) {
+        waitForElementVisible(driver, BaseElementsUI.DYNAMIC_TEXTBOX_BY_ID);
+    }
+
+    public String getTexboxAttributeValueByID(String firstName) {
+        return null;
+    }
 }
