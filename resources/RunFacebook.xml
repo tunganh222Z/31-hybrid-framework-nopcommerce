@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite parallel = "false" name="NopComerce">
+
+    <listeners>
+        <listener class-name="commons.MethodListener"/>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+        <listener class-name="reportConfig.ReportNGListener"/>
+    </listeners>
+
+    <test name="Run on Firefox">
+        <parameter name="browser" value="firefox"/>
+        <parameter name="facebookURL" value="https://web.facebook.com/"/>
+            <classes>
+                <class name="com.facebook.home.Level20_Element_Undisplayed"/>
+            </classes>
+    </test>
+
+</suite>

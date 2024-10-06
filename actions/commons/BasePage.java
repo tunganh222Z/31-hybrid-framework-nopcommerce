@@ -250,9 +250,33 @@ public class BasePage {
         }
     }
 
+    //Case 1 : Element hiền thị và có trong HTML
+    // Case 2 : Element hiển thị và không có trong HTML
     public boolean isElementDisplayed(WebDriver driver, String locator) {
         return getWebElement(driver, locator).isDisplayed();
     }
+
+    public void setImplicitWait(WebDriver driver, long timeout){
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(timeout));
+    }
+
+    public boolean isELementUndisplayed(WebDriver driver, String locator){
+        // Trước khi tìm element thì set time ngắn thôi
+        setImplicitWait(driver, shortTimeOut);
+        List<WebElement> elements = getListWebElements(driver, locator);
+        //Trả lại timeout mặc định cho các step còn lại, nếu không setLong là từ sau cứ short thôi
+        setImplicitWait(driver, longTimeOut);
+        if (elements.size() > 0 && elements.get(0).isDisplayed()){ // Element có trên UI và có trong DOM -> false
+            return false;
+        } else if (elements.size() == 1 && !elements.get(0).isDisplayed()){
+            // Element có trong DOM và không có trên UI
+            return true;
+        } else { // element không có trên UI và không có trong DOM
+            return true;
+        }
+    }
+
+
 
     public boolean isElementDisplayed(WebDriver driver, String locator, String... restParams) {
         return getWebElement(driver, getDynamicLocator(locator, restParams)).isDisplayed();
@@ -420,6 +444,10 @@ public class BasePage {
         fullFileName = fullFileName.trim();
         getWebElement(driver, BasePageUI.UPLOAD_FILE_TYPE).sendKeys(fullFileName);
     }
+
+    private long longTimeOut = GlobalConstant.LONG_TIMEOUT;
+    private long shortTimeOut = GlobalConstant.SHORT_TIMEOUT;
+
 
 }
 

@@ -16,4 +16,6 @@ public class GlobalConstant {
     public static final String DOWNLOAD_PATH = RELATIVE_PROJECT_PATH + File.separator + "downloadFiles" + File.separator;
 
 
+    public static final long LONG_TIMEOUT = 5;
+    public static final long SHORT_TIMEOUT = 30;
 }

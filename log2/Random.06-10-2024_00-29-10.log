@@ -1,0 +1,9 @@
+[06-10-2024 00:29:15.291 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 01: Open Register page
+[06-10-2024 00:29:15.439 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 02: Click to Register button
+[06-10-2024 00:29:15.735 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 03: Verify first name error msg
+[06-10-2024 00:29:18.405 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 01: Open Register page
+[06-10-2024 00:29:18.530 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 02: Click to Register button
+[06-10-2024 00:29:18.608 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 03: Verify first name error msg
+[06-10-2024 00:29:24.267 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 01: Open Register page
+[06-10-2024 00:29:24.416 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 02: Click to Register button
+[06-10-2024 00:29:24.501 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 03: Verify first name error msg
