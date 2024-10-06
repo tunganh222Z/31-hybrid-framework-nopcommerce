@@ -260,7 +260,7 @@ public class BasePage {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(timeout));
     }
 
-    public boolean isELementUndisplayed(WebDriver driver, String locator){
+    public boolean isELementUndisplayed(WebDriver driver, String locator){//
         // Trước khi tìm element thì set time ngắn thôi
         setImplicitWait(driver, shortTimeOut);
         List<WebElement> elements = getListWebElements(driver, locator);
