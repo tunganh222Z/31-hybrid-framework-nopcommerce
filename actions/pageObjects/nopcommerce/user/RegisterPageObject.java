@@ -1,14 +1,17 @@
 package pageObjects.nopcommerce.user;
 
+import commons.BaseElements;
 import commons.BasePage;
 import commons.PageGenratorManager;
 import org.openqa.selenium.WebDriver;
+import pageUIs.nopcommerce.user.BaseElementsUI;
 import pageUIs.nopcommerce.user.RegisterPageUI;
 
-public class RegisterPageObject extends BasePage {
+public class RegisterPageObject extends BaseElements {
     WebDriver driverPageObject;
 
     public RegisterPageObject(WebDriver driverPageObject) {
+        super (driverPageObject);
         this.driverPageObject = driverPageObject;
     }
 
@@ -42,11 +45,6 @@ public class RegisterPageObject extends BasePage {
         clickToElement(driverPageObject, RegisterPageUI.REGISTER_BUTTON);
     }
 
-    public HomePageObject clickToNopcommerceLogo() {
-        waitForElementClickable(driverPageObject, RegisterPageUI.NOPCOMMERCE_LOGO);
-        clickToElement(driverPageObject, RegisterPageUI.NOPCOMMERCE_LOGO);
-        return new HomePageObject(driverPageObject);
-    }
 
     public String getEmailErrorMsgText() {
         waitForListElementsVisible(driverPageObject, RegisterPageUI.EMAIL_ERROR_MSG);
