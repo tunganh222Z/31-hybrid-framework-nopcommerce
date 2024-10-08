@@ -1,7 +1,7 @@
 package com.nopcommerce.account;
 
 import commons.BaseTest;
-import commons.PageGenratorManager;
+import commons.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -35,7 +35,7 @@ public class Level21_Pattern_Object extends BaseTest {
         this.adminURL = adminURL;
         this.userURL = userURL;
 
-       homePage = PageGenratorManager.getHomePage(driver);
+       homePage = PageGeneratorManager.getHomePage(driver);
         // Mở ra URL page nào -> khởi tạo nó lên
         // Từ 1 page này chuyển qua page kia -> Khở tạo page đó lên
 
@@ -45,7 +45,7 @@ public class Level21_Pattern_Object extends BaseTest {
     public void User_01_Register_Empty_Data() {
 
         homePage.clickToHeaderLinksByName("Register");
-        registerPage = new RegisterPageObject(driver);
+        registerPage = PageGeneratorManager.getRegisterPage(driver);
 
         registerPage.clickToRegisterButton();
 
@@ -62,7 +62,7 @@ public class Level21_Pattern_Object extends BaseTest {
         homePage = registerPage.clickToNopcommerceLogo();
 
         homePage.clickToHeaderLinksByName("Register");
-        registerPage = new RegisterPageObject(driver);
+        registerPage = PageGeneratorManager.getRegisterPage(driver);
 
         registerPage.enterToTextBoxByID("FirstName", "Tung");
         registerPage.enterToTextBoxByID("LastName", "Anh");
@@ -80,7 +80,7 @@ public class Level21_Pattern_Object extends BaseTest {
         homePage = registerPage.clickToNopcommerceLogo();
 
         homePage.clickToHeaderLinksByName("Register");
-        registerPage = new RegisterPageObject(driver);
+        registerPage = PageGeneratorManager.getRegisterPage(driver);
 
         registerPage.enterToTextBoxByID("FirstName", "Tung");
         registerPage.enterToTextBoxByID("LastName", "Anh");
@@ -99,7 +99,7 @@ public class Level21_Pattern_Object extends BaseTest {
         homePage = registerPage.clickToNopcommerceLogo();
 
         homePage.clickToHeaderLinksByName("Register");
-        registerPage = new RegisterPageObject(driver);
+        registerPage = PageGeneratorManager.getRegisterPage(driver);
 
         registerPage.enterToTextBoxByID("FirstName", "Tung");
         registerPage.enterToTextBoxByID("LastName", "Anh");
@@ -118,7 +118,7 @@ public class Level21_Pattern_Object extends BaseTest {
         homePage = registerPage.clickToNopcommerceLogo();
 
         homePage.clickToHeaderLinksByName("Register");
-        registerPage = new RegisterPageObject(driver);
+        registerPage = PageGeneratorManager.getRegisterPage(driver);
 
         registerPage.enterToTextBoxByID("FirstName", "Tung");
         registerPage.enterToTextBoxByID("LastName", "Anh");
@@ -137,21 +137,21 @@ public class Level21_Pattern_Object extends BaseTest {
     public void User_06_Login_Success() {
         registerPage.clickToHeaderLinksByName("Log out");
 
-        homePage = new HomePageObject(driver);
+        homePage = PageGeneratorManager.getHomePage(driver);
 
         homePage.clickToHeaderLinksByName("Log in");
-        loginPage = new UserLoginPageObject(driver);
+        loginPage = PageGeneratorManager.getUserLoginPage(driver);
 
 
         loginPage.enterToTextBoxByID("Email",emailAddress);
         loginPage.enterToTextBoxByID("Password","123tunganh");
 
         loginPage.clickToButtonByText("Log in");
-        homePage = new HomePageObject(driver);
+        homePage = PageGeneratorManager.getHomePage(driver);
         // valid data login > login success > Homepage
 
         homePage.clickToHeaderLinksByName("My account");
-        customerPage = new CustomerPageObject(driver);
+        customerPage = PageGeneratorManager.getCustomerPage(driver);
         // -> Customer page
 
         //verify

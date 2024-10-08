@@ -1,7 +1,7 @@
 package pageObjects.nopcommerce.admin;
 
 import commons.BasePage;
-import commons.PageGenratorManager;
+import commons.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
 import pageUIs.nopcommerce.admin.AdminLoginPageUI;
 
@@ -25,6 +25,6 @@ public class AdminLoginPageObject extends BasePage {
     public AdminDashboardPageObject clickToLoginButton() {
         waitForElementClickable(driverPageObject, AdminLoginPageUI.LOGIN_BUTTON);
         clickToElement(driverPageObject, AdminLoginPageUI.LOGIN_BUTTON);
-        return PageGenratorManager.getAdminDashboardPage(driverPageObject);
+        return PageGeneratorManager.getAdminDashboardPage(driverPageObject);
     }
 }

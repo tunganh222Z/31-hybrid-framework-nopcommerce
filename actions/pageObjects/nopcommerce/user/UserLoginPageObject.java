@@ -1,8 +1,7 @@
 package pageObjects.nopcommerce.user;
 
 import commons.BaseElements;
-import commons.BasePage;
-import commons.PageGenratorManager;
+import commons.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
 import pageUIs.nopcommerce.user.UserLoginPageUI;
 
@@ -27,6 +26,6 @@ public class UserLoginPageObject extends BaseElements {
     public HomePageObject clickToLoginButton() {
         waitForElementClickable(driverPageObject, UserLoginPageUI.LOGIN_BUTTON);
         clickToElement(driverPageObject, UserLoginPageUI.LOGIN_BUTTON);
-        return PageGenratorManager.getHomePage(driverPageObject);
+        return PageGeneratorManager.getHomePage(driverPageObject);
     }
 }

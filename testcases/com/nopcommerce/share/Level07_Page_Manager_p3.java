@@ -1,7 +1,7 @@
 package com.nopcommerce.share;
 
 import commons.BaseTest;
-import commons.PageGenratorManager;
+import commons.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -35,7 +35,7 @@ public class Level07_Page_Manager_p3 extends BaseTest {
         this.adminURL = adminURL;
         this.userURL = userURL;
 
-        PageGenratorManager.getHomePage(driver);
+        PageGeneratorManager.getHomePage(driver);
         // Mở ra URL page nào -> khởi tạo nó lên
         // Từ 1 page này chuyển qua page kia -> Khở tạo page đó lên
 

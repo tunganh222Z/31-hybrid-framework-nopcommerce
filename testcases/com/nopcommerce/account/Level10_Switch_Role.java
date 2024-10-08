@@ -2,7 +2,7 @@ package com.nopcommerce.account;
 
 import commons.BaseTest;
 import commons.GlobalConstant;
-import commons.PageGenratorManager;
+import commons.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -36,7 +36,7 @@ public class Level10_Switch_Role extends BaseTest {
         this.adminURL = adminURL;
         this.userURL = userURL;
 
-        homePage = PageGenratorManager.getHomePage(driver);
+        homePage = PageGeneratorManager.getHomePage(driver);
         // Mở ra URL page nào -> khởi tạo nó lên
         // Từ 1 page này chuyển qua page kia -> Khở tạo page đó lên
 
@@ -69,7 +69,7 @@ public class Level10_Switch_Role extends BaseTest {
         // Homepage user -> login page admin
         homePage.openPageURL(driver, this.adminURL);
 
-        adminLoginPage = PageGenratorManager.getAdminLoginPage(driver);
+        adminLoginPage = PageGeneratorManager.getAdminLoginPage(driver);
 
         adminLoginPage.enterToEmailTextbox(GlobalConstant.ADMIN_USERNAME);
         adminLoginPage.enterToPasswordTextbox(GlobalConstant.ADMIN_PASSWORD);
@@ -82,9 +82,9 @@ public class Level10_Switch_Role extends BaseTest {
         homePage = adminDashboardPage.clickToLogOutLink();
         // -> homePage user -> Login Admin -> Login User
         homePage.openPageURL(driver,this.adminURL);
-        PageGenratorManager.getAdminLoginPage(driver);
+        PageGeneratorManager.getAdminLoginPage(driver);
         adminLoginPage.openPageURL(driver,this.userURL);
-        PageGenratorManager.getHomePage(driver);
+        PageGeneratorManager.getHomePage(driver);
 
     }
 

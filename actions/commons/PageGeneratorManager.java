@@ -5,7 +5,7 @@ import pageObjects.nopcommerce.admin.AdminDashboardPageObject;
 import pageObjects.nopcommerce.admin.AdminLoginPageObject;
 import pageObjects.nopcommerce.user.*;
 
-public class PageGenratorManager {
+public class PageGeneratorManager {
 
     // Thằng này có chức năng nhét driver vào các page mỗi khi switch page
     // trong test case sẽ báo PageGenratorManager.getHomePage(driver);

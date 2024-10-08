@@ -1,8 +1,7 @@
 package pageObjects.nopcommerce.user;
 
 import commons.BaseElements;
-import commons.BasePage;
-import commons.PageGenratorManager;
+import commons.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
 import pageUIs.nopcommerce.user.MyAccountSideBarPageUI;
 
@@ -17,25 +16,25 @@ public class MyAccountSideBarPageObject extends BaseElements {
     public AddressPageObject openAddressPage(){
         waitForElementClickable(driver, MyAccountSideBarPageUI.ADDRESS_LINK_TEXT);
         clickToElement(driver, MyAccountSideBarPageUI.ADDRESS_LINK_TEXT);
-        return PageGenratorManager.getAddressPage(driver);
+        return PageGeneratorManager.getAddressPage(driver);
     }
 
     public OrderPageObject openOrderPage(){
         waitForElementClickable(driver, MyAccountSideBarPageUI.ORDER_LINK_TEXT);
         clickToElement(driver, MyAccountSideBarPageUI.ORDER_LINK_TEXT);
-        return PageGenratorManager.getOrderPage(driver);
+        return PageGeneratorManager.getOrderPage(driver);
     }
 
     public RewardPointPageObject openRewardPointPage(){
         waitForElementClickable(driver, MyAccountSideBarPageUI.REWARD_POINT_LINK_TEXT);
         clickToElement(driver, MyAccountSideBarPageUI.REWARD_POINT_LINK_TEXT);
-        return PageGenratorManager.getRewardPointPage(driver);
+        return PageGeneratorManager.getRewardPointPage(driver);
     }
 
     public CustomerPageObject openCustomerPage(){
         waitForElementClickable(driver, MyAccountSideBarPageUI.CUSTOMER_LINK_TEXT);
         clickToElement(driver, MyAccountSideBarPageUI.CUSTOMER_LINK_TEXT);
-        return PageGenratorManager.getCustomerPage(driver);
+        return PageGeneratorManager.getCustomerPage(driver);
     }
 
     public MyAccountSideBarPageObject openDynamicSideBar (String pageName){
@@ -44,13 +43,13 @@ public class MyAccountSideBarPageObject extends BaseElements {
         clickToElement(driver, MyAccountSideBarPageUI.DYNAMIC_SIDEBAR_LINK_TEXT, pageName);
         switch (pageName){
             case "Customer info":
-                return  PageGenratorManager.getCustomerPage(driver);
+                return  PageGeneratorManager.getCustomerPage(driver);
             case "Addresses":
-                return PageGenratorManager.getAddressPage(driver);
+                return PageGeneratorManager.getAddressPage(driver);
             case "Reward points":
-                return PageGenratorManager.getRewardPointPage(driver);
+                return PageGeneratorManager.getRewardPointPage(driver);
             case "Orders":
-                return PageGenratorManager.getOrderPage(driver);
+                return PageGeneratorManager.getOrderPage(driver);
             default:
                 return null;
         }
