@@ -8,7 +8,6 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageObject.factory.LoginPageObject;
 import pageObjects.nopcommerce.admin.AdminDashboardPageObject;
 import pageObjects.nopcommerce.admin.AdminLoginPageObject;
 import pageObjects.nopcommerce.user.CustomerPageObject;
@@ -157,11 +156,11 @@ public class Level21_Pattern_Object extends BaseTest {
 
         //verify
 
-        Assert.assertEquals(customerPage.getTexboxAttributeValueByID("FirstName"),"Tung");
+        Assert.assertEquals(customerPage.getTextboxAttributeValueByID("FirstName"),"Tung");
 
-        Assert.assertEquals(customerPage.getTexboxAttributeValueByID("LastName"),"Anh");
+        Assert.assertEquals(customerPage.getTextboxAttributeValueByID("LastName"),"Anh");
 
-        Assert.assertEquals(customerPage.getTexboxAttributeValueByID("Email"),emailAddress);
+        Assert.assertEquals(customerPage.getTextboxAttributeValueByID("Email"),emailAddress);
 
         customerPage.clickToNopcommerceLogo();
     }

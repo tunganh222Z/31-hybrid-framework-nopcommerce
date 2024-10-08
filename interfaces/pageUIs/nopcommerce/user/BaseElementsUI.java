@@ -7,6 +7,6 @@ public class BaseElementsUI {
     public static final String DYNAMIC_BUTTON_BY_TEXT = "xpath=//button[contains(text(),'%s')]";
     public static final String DYNAMIC_ERROR_MSG = "xpath=//span[@id='%s-error']";
 
-    public static final String DYNAMIC_HEADER_LINKS_BY_NAME = "xpath=//";
-    public static final String DYNAMIC_TEXTBOX_BY_ID = "";
+    public static final String DYNAMIC_HEADER_LINKS_BY_NAME = "xpath=//div[@class='header-upper']//a[contains(string(),'%s')]";
+    public static final String DYNAMIC_TEXTBOX_BY_ID = "xpath=//input[@id='%s']";
 }

@@ -3,7 +3,6 @@ package commons;
 import org.openqa.selenium.WebDriver;
 import pageObjects.nopcommerce.user.HomePageObject;
 import pageUIs.nopcommerce.user.BaseElementsUI;
-import pageUIs.nopcommerce.user.HomePageUI;
 
 public class BaseElements extends BasePage{
     WebDriver driver;
@@ -34,11 +33,13 @@ public class BaseElements extends BasePage{
         return getWebElementText(driver, BaseElementsUI.DYNAMIC_ERROR_MSG, id);
     }
 
-    public void enterToTextBoxByID(String firstName, String tung) {
-        waitForElementVisible(driver, BaseElementsUI.DYNAMIC_TEXTBOX_BY_ID);
+    public void enterToTextBoxByID(String id, String keyToSend) {
+        waitForElementVisible(driver, BaseElementsUI.DYNAMIC_TEXTBOX_BY_ID,id);
+        sendkeyToElement(driver, BaseElementsUI.DYNAMIC_TEXTBOX_BY_ID, keyToSend, id);
     }
 
-    public String getTexboxAttributeValueByID(String firstName) {
-        return null;
+    public String getTextboxAttributeValueByID(String id) {
+        waitForElementVisible(driver, BaseElementsUI.DYNAMIC_TEXTBOX_BY_ID, id);
+        return getAttributeInDOM(driver, BaseElementsUI.DYNAMIC_TEXTBOX_BY_ID, "value", id);
     }
 }
