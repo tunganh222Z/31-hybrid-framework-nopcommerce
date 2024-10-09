@@ -4,15 +4,15 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="7.451">
+           time="5.107">
   <properties />
   
   
-            <testcase name="User_01_Register_Empty_Data" time="0.650" classname="com.nopcommerce.account.Level21_Pattern_Object" />
-                <testcase name="User_02_Register_Invalid_Email" time="0.839" classname="com.nopcommerce.account.Level21_Pattern_Object" />
-                <testcase name="User_03_Register_Invalid_Password" time="0.659" classname="com.nopcommerce.account.Level21_Pattern_Object" />
-                <testcase name="User_05_Register_Success" time="1.606" classname="com.nopcommerce.account.Level21_Pattern_Object" />
-                <testcase name="User_04_Register_Incorrect_Confirm_Password" time="1.188" classname="com.nopcommerce.account.Level21_Pattern_Object" />
-                <testcase name="User_06_Login_Success" time="2.509" classname="com.nopcommerce.account.Level21_Pattern_Object" />
+            <testcase name="User_04_Register_Incorrect_Confirm_Password" time="1.186" classname="com.nopcommerce.account.Level21_Pattern_Object" />
+                <testcase name="User_02_Register_Invalid_Email" time="0.830" classname="com.nopcommerce.account.Level21_Pattern_Object" />
+                <testcase name="User_03_Register_Invalid_Password" time="0.773" classname="com.nopcommerce.account.Level21_Pattern_Object" />
+                <testcase name="User_01_Register_Empty_Data" time="0.657" classname="com.nopcommerce.account.Level21_Pattern_Object" />
+                <testcase name="User_06_Login_Success" time="0.900" classname="com.nopcommerce.account.Level21_Pattern_Object" />
+                <testcase name="User_05_Register_Success" time="0.761" classname="com.nopcommerce.account.Level21_Pattern_Object" />
       
 </testsuite>
