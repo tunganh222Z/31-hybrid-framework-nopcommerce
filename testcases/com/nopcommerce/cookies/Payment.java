@@ -2,6 +2,7 @@ package com.nopcommerce.cookies;
 
 import commons.BaseTest;
 import commons.PageGeneratorManager;
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -11,6 +12,8 @@ import org.testng.annotations.Test;
 import pageObjects.nopcommerce.user.CustomerPageObject;
 import pageObjects.nopcommerce.user.HomePageObject;
 import pageObjects.nopcommerce.user.UserLoginPageObject;
+
+import java.util.Set;
 
 public class Payment extends BaseTest {
     WebDriver driver;
@@ -30,6 +33,8 @@ public class Payment extends BaseTest {
 
         homePage = PageGeneratorManager.getHomePage(driver);
         loginPage = homePage.clickToLoginLink();
+
+
 
         loginPage.setCookies(driver, Common_Register.cookies);
         loginPage.sleepInSecond(5);

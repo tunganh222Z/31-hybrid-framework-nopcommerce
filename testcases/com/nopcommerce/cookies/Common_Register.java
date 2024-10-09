@@ -63,6 +63,10 @@ public class Common_Register extends BaseTest {
         homePage.sleepInSecond(5);
 
         cookies = homePage.getBrowserCookies(driver);
+        Set<Cookie> cookies = driver.manage().getCookies();
+        for (Cookie cookie : cookies) {
+            System.out.println("Cookie Name: " + cookie.getName() + ", Value: " + cookie.getValue());
+        }
         closeBrowser();
     }
 
