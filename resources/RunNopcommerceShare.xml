@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite parallel = "false" name="NopComerce">
+
+    <listeners>
+        <listener class-name="commons.MethodListener"/>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+        <listener class-name="reportConfig.ReportNGListener"/>
+    </listeners>
+
+    <test name="Run on Firefox" preserve-order="true">
+        <parameter name="browser" value="firefox"/>
+        <parameter name="adminURL" value="http://localhost/login?ReturnUrl=%2FAdmin"/>
+        <parameter name="userURL" value="http://localhost/"/>
+            <classes>
+                <class name="com.nopcommerce.share.Common_Register"/>
+                <class name="com.nopcommerce.share.Product"/>
+                <class name="com.nopcommerce.share.Payment"/>
+            </classes>
+    </test>
+
+</suite>
