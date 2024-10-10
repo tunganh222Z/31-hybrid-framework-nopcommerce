@@ -55,7 +55,7 @@ public class BaseTest {
     protected void closeBrowser(){
         String cmd = null;
         try {
-            String osName = System.getProperty("os.name").toLowerCase();
+            String osName = GlobalConstant.OS_NAME.toLowerCase();
             log.info("OS name = " + osName);
 
             String driverInstanceName = driver.toString().toLowerCase();
@@ -82,7 +82,7 @@ public class BaseTest {
             } else {
                 cmd = "pkill " + browserDriverName;
             }
-
+            // close browser
             if (driver != null) {
                 driver.manage().deleteAllCookies();
                 driver.quit();
@@ -90,6 +90,7 @@ public class BaseTest {
         } catch (Exception e) {
             log.info(e.getMessage());
         } finally {
+            // quit driver
             try {
                 Process process = Runtime.getRuntime().exec(cmd);
                 process.waitFor();
