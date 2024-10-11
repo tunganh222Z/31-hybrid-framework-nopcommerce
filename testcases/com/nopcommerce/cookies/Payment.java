@@ -53,7 +53,6 @@ public class Payment extends BaseTest {
 
     @Test
     public void Product_01_Visa() {
-
     }
 
     @Test
