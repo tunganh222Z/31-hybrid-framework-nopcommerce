@@ -34,8 +34,6 @@ public class Payment extends BaseTest {
         homePage = PageGeneratorManager.getHomePage(driver);
         loginPage = homePage.clickToLoginLink();
 
-
-
         loginPage.setCookies(driver, Common_Register.cookies);
         loginPage.sleepInSecond(5);
         loginPage.refreshCurrentPage(driver);
