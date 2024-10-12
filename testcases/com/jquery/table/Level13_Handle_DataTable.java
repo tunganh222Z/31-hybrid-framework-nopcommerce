@@ -45,19 +45,19 @@ public class Level13_Handle_DataTable extends BaseTestJQuery {
     @Test
     public void TC_03_Displayed (){
         //Verify any row
-        //homePage.isRowValuesDisplayed("159979", "Chad", "161889", "321868");
+        homePage.isRowValuesDisplayed("159979", "Chad", "161889", "321868");
 
     }
 
     @Test
     public void TC_04_Icon_Button_Checkbox (){
-        //homePage.clickToRowActionByCountry("Comoros", "remove");
+        homePage.clickToRowActionByCountry("Comoros", "remove");
 
     }
 
     @Test
     public void TC_05_Get_All_Row_Values(){
-        //allValueUI = homePage.getAllPageValueByColumnName("Country");
+        allValueUI = homePage.getAllPageValueByColumnName("Country");
     }
 
     @Test
