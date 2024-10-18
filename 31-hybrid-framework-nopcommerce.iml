@@ -19,5 +19,6 @@
     <orderEntry type="library" name="testng-7.10.2" level="project" />
     <orderEntry type="library" name="log4jV2" level="project" />
     <orderEntry type="library" name="ReportNG" level="project" />
+    <orderEntry type="library" name="libExntentRp5.1.2" level="project" />
   </component>
 </module>
