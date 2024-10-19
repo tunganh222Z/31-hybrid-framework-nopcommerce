@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="libExntentRp5.1.2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libExtent5/extentreports-5.1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libExtent5/freemarker-2.3.32.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libExtent5/gson-2.10.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libExtent5/lombok-1.18.26.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libExtent5/reactive-streams-1.0.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libExtent5/rxjava-3.1.6.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
