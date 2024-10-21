@@ -1,11 +1,12 @@
 package utilities;
 
 import net.datafaker.Faker;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.Locale;
 
 public class FakerConfig {
-
     public static FakerConfig getFakerConfig(){
         return new FakerConfig();
     }

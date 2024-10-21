@@ -4,6 +4,7 @@ import commons.BaseElements;
 import commons.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
 import pageUIs.nopcommerce.user.RegisterPageUI;
+import pojoData.UserInfo;
 
 public class RegisterPageObject extends BaseElements {
     WebDriver driverPageObject;
@@ -78,5 +79,13 @@ public class RegisterPageObject extends BaseElements {
         waitForElementClickable(driverPageObject, RegisterPageUI.LOGOUT_LINK);
         clickToElement(driverPageObject, RegisterPageUI.LOGOUT_LINK);
         return PageGeneratorManager.getHomePage(driverPageObject);
+    }
+
+    public void setFormRegister(UserInfo userInfo) {
+        enterToFirstNameTextBox(userInfo.getFirstName());
+        enterToLastNameTextBox(userInfo.getLastName());
+        enterToEmailTextBox(userInfo.getEmailAddress());
+        enterToPasswordTextBox(userInfo.getPassword());
+        enterToConfirmPasswordTextBox(userInfo.getPassword());
     }
 }
