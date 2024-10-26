@@ -28,3 +28,16 @@
 [06-10-2024 01:12:57.976 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 01: Open Register page
 [06-10-2024 01:12:58.129 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 02: Click to Register button
 [06-10-2024 01:12:58.434 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 03: Verify first name error msg
+[26-10-2024 09:45:41.285 INFO com.nopcommerce.account.Level28_Data_Json] - OS name = windows 11
+[26-10-2024 09:45:41.288 INFO com.nopcommerce.account.Level28_Data_Json] - Driver instance name = firefoxdriver: firefox on windows (a955dea5-82c1-425d-88f6-5c15e3694065)
+[26-10-2024 09:46:04.214 INFO com.nopcommerce.account.Level28_Data_Json] - OS name = windows 11
+[26-10-2024 09:46:04.217 INFO com.nopcommerce.account.Level28_Data_Json] - Driver instance name = firefoxdriver: firefox on windows (9f02a992-59e8-4dbf-ba7e-8f0975c78898)
+[26-10-2024 09:47:00.417 INFO com.nopcommerce.account.Level28_Data_Json] - OS name = windows 11
+[26-10-2024 09:47:00.421 INFO com.nopcommerce.account.Level28_Data_Json] - Driver instance name = firefoxdriver: firefox on windows (16886631-cd4f-44de-87a8-05e01a30e061)
+[26-10-2024 09:47:00.429 INFO com.nopcommerce.account.Level28_Data_Json] - Failed to decode response from marionette
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [16886631-cd4f-44de-87a8-05e01a30e061, deleteAllCookies {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 131.0.3, moz:accessibilityChecks: false, moz:buildID: 20241011205646, moz:debuggerAddress: 127.0.0.1:38400, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 27208, moz:profile: C:\Users\TugAh\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:38400/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 16886631-cd4f-44de-87a8-05e01a30e061

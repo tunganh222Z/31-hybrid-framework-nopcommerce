@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Run on Firefox"
+           tests="1"
+           failures="1"
+           errors="0"
+           skipped="0"
+           time="4.902">
+  <properties />
+            <testcase name="beforeClass" time="4.902" classname="com.nopcommerce.cookies.Common_Register">
+                <failure type="java.lang.IllegalArgumentException"
+                  message="Keys to send should be a not null CharSequence"
+              >
+<![CDATA[java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+  org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+  commons.BasePage.sendkeyToElement(BasePage.java:165)
+  pageObjects.nopcommerce.user.UserLoginPageObject.enterToEmailTextbox(UserLoginPageObject.java:18)
+  com.nopcommerce.cookies.Common_Register.beforeClass(Common_Register.java:60)
+  java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+  java.base/java.lang.reflect.Method.invoke(Method.java:580)
+  org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+  org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+  org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+  org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+  org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:655)
+  org.testng.TestRunner.beforeRun(TestRunner.java:644)
+  org.testng.TestRunner.run(TestRunner.java:610)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+  org.testng.SuiteRunner.run(SuiteRunner.java:312)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+  org.testng.TestNG.runSuites(TestNG.java:1112)
+  org.testng.TestNG.run(TestNG.java:1079)
+  com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+  com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+]]>
+      </failure>
+
+          </testcase>
+  
+  
+  
+</testsuite>

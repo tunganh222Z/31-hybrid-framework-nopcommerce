@@ -17,6 +17,8 @@ public class GlobalConstant {
 
     public static final String OS_NAME = System.getProperty("os.name");
 
+    public static final String RESOURCE_PATH = RELATIVE_PROJECT_PATH + File.separator + "resources" + File.separator;
+
 
     public static final long LONG_TIMEOUT = 5;
     public static final long SHORT_TIMEOUT = 30;

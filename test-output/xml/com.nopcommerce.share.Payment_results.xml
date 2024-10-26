@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Run on Firefox"
+           tests="3"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.000">
+  <properties />
+  
+  
+            <testcase name="Product_02_Cheque" time="0.000" classname="com.nopcommerce.share.Payment" />
+                <testcase name="Product_03_Paypal" time="0.000" classname="com.nopcommerce.share.Payment" />
+                <testcase name="Product_01_Visa" time="0.000" classname="com.nopcommerce.share.Payment" />
+      
+</testsuite>

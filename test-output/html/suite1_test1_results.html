@@ -12,57 +12,45 @@
 <body>
 <h1>Run on Firefox</h1>
 <p>
-  Test duration: 18.498s
+  Test duration: 4.907s
 </p>
 
-  <table class="resultsTable configTable">
-    <tr><th colspan="3" class="header failedConfig">Failed Configuration</th></tr>
-              <tr class="group">
-        <td colspan="3">com.nopcommerce.cookies.Payment</td>
+
+
+  <table class="resultsTable">
+    <tr><th colspan="3" class="header failed">Failed Tests</th></tr>
+          <tr>
+        <td colspan="3" class="group">com.nopcommerce.account.Level28_Data_Json</td>
       </tr>
             
 <tr>
   <td class="method">
-                  beforeClass
+                  User_05_Register_Success
       </td>
   <td class="duration">
-    3.811s
+    0.002s
   </td>
   <td class="result">
         
-          <i>Method arguments: </i><span class="arguments">"firefox", "http://localhost/login?ReturnUrl=%2FAdmin", "http://localhost/"</span><br />
     
-        
+            <div class="testOutput">
+                        <br><a target="_blank" href="file:///C:\Users\TugAh\Documents\AutomationTesting31\nopcommerce\ReportNGScreenShots\User_05_Register_Success_26_10_2024_09_46_03.png"><img src="file:///C:\Users\TugAh\Documents\AutomationTesting31\nopcommerce\ReportNGScreenShots\User_05_Register_Success_26_10_2024_09_46_03.png" height='100' width='150'/> </a></br>
+                  </div>
+    
 
-        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.UnableToSetCookieException: [Exception... &quot;Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsICookieManager.add]&quot;&nbsp; nsresult: &quot;0x80070057 (NS_ERROR_ILLEGAL_VALUE)&quot;&nbsp; location: &quot;JS frame :: chrome://remote/content/marionette/cookie.sys.mjs :: cookie.add :: line 229&quot;&nbsp; data: no]<br/>
-Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;<br/>
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.3&apos;<br/>
-Driver info: org.openqa.selenium.firefox.FirefoxDriver<br/>
-Command: [bf4c53bc-208f-4bf0-a09f-5467df203235, addCookie {cookie=.Nop.Authentication=CfDJ8ANtxi6GmRdAg-XvtCcZLQCmHnSNwVQS6W7X511lIOujrB0GNpDvW-3m_btba03p66TIoTJCbmXLy2piUeZXsXpg0hZkU6arhMaVQ9RfEKGbGKiml_vJnUP1Q5T6pocKxt6RcAuhvLtKUmRuf1NQEhPCFMOwDVxsuV1JtinQugbamicF8g-sKlnudb-KGUzU8HqdOTB-KBd-obRhnlBJ2Q8pJmh3v2ugs2sbCQm6e_m2HwOEJXuNHL8teLBbNwRfInQlWsdGkngOV7XcB1ZkE9TwdzjLzMonzyg0qnC8oS-_N6sP9ek6x92FfSZ6vybvcCRa7cYB_trvbh_2FRriQHzUtYpvUiBeOCcmZa48wWwy9ARs3ppojylnfNJiVHavcldZs0_0tIqsrUFCC0iqZK98XOs5n1R_dsjNq00Yp7KmVCwseOarnOkN0h0aZNatCTBZcwOTMOGXTqFBx1aUZ8rsuw5GS9dA5s6fWIqjz_xLaHnM93eZTDHx_Y_4itaPLlwpiJwKr9TOlxMWY5kTdFvZIN7VpcLrGbidERTsGo1UqMnv5j4TVA82YqWBlgVTzk7OsINbI6AIjYR_uvqGyec; path=/; domain=localhost; sameSite=Lax}]<br/>
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 131.0, moz:accessibilityChecks: false, moz:buildID: 20240923135042, moz:debuggerAddress: 127.0.0.1:32383, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 23660, moz:profile: C:\Users\TugAh\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:32383/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}<br/>
-Session ID: bf4c53bc-208f-4bf0-a09f-5467df203235</b></a><br />
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.nopcommerce.user.RegisterPageObject.clickToNopcommerceLogo()&quot; because &quot;this.registerPage&quot; is null</b></a><br />
     <div class="stackTrace" id="exception-0">
-              java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)<br />
-              java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)<br />
-              java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)<br />
-              org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)<br />
-              org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)<br />
-              org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)<br />
-              org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)<br />
-              org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)<br />
-              org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)<br />
-              org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)<br />
-              org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions.addCookie(RemoteWebDriver.java:849)<br />
-              commons.BasePage.setCookies(BasePage.java:93)<br />
-              com.nopcommerce.cookies.Payment.beforeClass(Payment.java:39)<br />
+              com.nopcommerce.account.Level28_Data_Json.User_05_Register_Success(Level28_Data_Json.java:54)<br />
               java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)<br />
               java.base/java.lang.reflect.Method.invoke(Method.java:580)<br />
               org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)<br />
-              org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)<br />
-              org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)<br />
-              org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)<br />
-              org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)<br />
-              org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)<br />
+              org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)<br />
+              org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)<br />
+              org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)<br />
+              org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)<br />
+              org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)<br />
+              org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)<br />
+              org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)<br />
               java.base/java.util.ArrayList.forEach(ArrayList.java:1596)<br />
               org.testng.TestRunner.privateRun(TestRunner.java:739)<br />
               org.testng.TestRunner.run(TestRunner.java:614)<br />
@@ -81,52 +69,34 @@ Session ID: bf4c53bc-208f-4bf0-a09f-5467df203235</b></a><br />
                 </div>
       </td>
 </tr>
-          <tr class="group">
-        <td colspan="3">com.nopcommerce.cookies.Product</td>
-      </tr>
-            
 <tr>
   <td class="method">
-                  beforeClass
+                  User_06_Login_Success
       </td>
   <td class="duration">
-    3.843s
+    0.000s
   </td>
   <td class="result">
         
-          <i>Method arguments: </i><span class="arguments">"firefox", "http://localhost/login?ReturnUrl=%2FAdmin", "http://localhost/"</span><br />
     
-        
+            <div class="testOutput">
+                        <br><a target="_blank" href="file:///C:\Users\TugAh\Documents\AutomationTesting31\nopcommerce\ReportNGScreenShots\User_06_Login_Success_26_10_2024_09_46_04.png"><img src="file:///C:\Users\TugAh\Documents\AutomationTesting31\nopcommerce\ReportNGScreenShots\User_06_Login_Success_26_10_2024_09_46_04.png" height='100' width='150'/> </a></br>
+                  </div>
+    
 
-        <a href="javascript:toggleElement('exception-1', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.UnableToSetCookieException: [Exception... &quot;Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsICookieManager.add]&quot;&nbsp; nsresult: &quot;0x80070057 (NS_ERROR_ILLEGAL_VALUE)&quot;&nbsp; location: &quot;JS frame :: chrome://remote/content/marionette/cookie.sys.mjs :: cookie.add :: line 229&quot;&nbsp; data: no]<br/>
-Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;<br/>
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.3&apos;<br/>
-Driver info: org.openqa.selenium.firefox.FirefoxDriver<br/>
-Command: [d9326a9a-313b-4b5d-a834-71d50848bb86, addCookie {cookie=.Nop.Authentication=CfDJ8ANtxi6GmRdAg-XvtCcZLQCmHnSNwVQS6W7X511lIOujrB0GNpDvW-3m_btba03p66TIoTJCbmXLy2piUeZXsXpg0hZkU6arhMaVQ9RfEKGbGKiml_vJnUP1Q5T6pocKxt6RcAuhvLtKUmRuf1NQEhPCFMOwDVxsuV1JtinQugbamicF8g-sKlnudb-KGUzU8HqdOTB-KBd-obRhnlBJ2Q8pJmh3v2ugs2sbCQm6e_m2HwOEJXuNHL8teLBbNwRfInQlWsdGkngOV7XcB1ZkE9TwdzjLzMonzyg0qnC8oS-_N6sP9ek6x92FfSZ6vybvcCRa7cYB_trvbh_2FRriQHzUtYpvUiBeOCcmZa48wWwy9ARs3ppojylnfNJiVHavcldZs0_0tIqsrUFCC0iqZK98XOs5n1R_dsjNq00Yp7KmVCwseOarnOkN0h0aZNatCTBZcwOTMOGXTqFBx1aUZ8rsuw5GS9dA5s6fWIqjz_xLaHnM93eZTDHx_Y_4itaPLlwpiJwKr9TOlxMWY5kTdFvZIN7VpcLrGbidERTsGo1UqMnv5j4TVA82YqWBlgVTzk7OsINbI6AIjYR_uvqGyec; path=/; domain=localhost; sameSite=Lax}]<br/>
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 131.0, moz:accessibilityChecks: false, moz:buildID: 20240923135042, moz:debuggerAddress: 127.0.0.1:32020, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 27900, moz:profile: C:\Users\TugAh\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:32020/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}<br/>
-Session ID: d9326a9a-313b-4b5d-a834-71d50848bb86</b></a><br />
+        <a href="javascript:toggleElement('exception-1', 'block')" title="Click to expand/collapse"><b>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.nopcommerce.user.RegisterPageObject.clickToHeaderLinksByName(String)&quot; because &quot;this.registerPage&quot; is null</b></a><br />
     <div class="stackTrace" id="exception-1">
-              java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)<br />
-              java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)<br />
-              java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)<br />
-              org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)<br />
-              org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)<br />
-              org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)<br />
-              org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)<br />
-              org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)<br />
-              org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)<br />
-              org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)<br />
-              org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions.addCookie(RemoteWebDriver.java:849)<br />
-              commons.BasePage.setCookies(BasePage.java:93)<br />
-              com.nopcommerce.cookies.Product.beforeClass(Product.java:34)<br />
+              com.nopcommerce.account.Level28_Data_Json.User_06_Login_Success(Level28_Data_Json.java:74)<br />
               java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)<br />
               java.base/java.lang.reflect.Method.invoke(Method.java:580)<br />
               org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)<br />
-              org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)<br />
-              org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)<br />
-              org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)<br />
-              org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)<br />
-              org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)<br />
+              org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)<br />
+              org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)<br />
+              org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)<br />
+              org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)<br />
+              org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)<br />
+              org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)<br />
+              org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)<br />
               java.base/java.util.ArrayList.forEach(ArrayList.java:1596)<br />
               org.testng.TestRunner.privateRun(TestRunner.java:739)<br />
               org.testng.TestRunner.run(TestRunner.java:614)<br />
@@ -143,146 +113,10 @@ Session ID: d9326a9a-313b-4b5d-a834-71d50848bb86</b></a><br />
               com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)<br />
               com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)<br />
                 </div>
-      </td>
-</tr>
-    
-          <tr><td colspan="3">&nbsp;</td></tr>
-      <tr><td colspan="3" class="header skippedConfig">Skipped Configuration</td></tr>
-                    <tr>
-          <td colspan="3" class="group">com.nopcommerce.cookies.Payment</td>
-        </tr>
-                
-<tr>
-  <td class="method">
-                  afterClass
-      </td>
-  <td class="duration">
-    0.000s
-  </td>
-  <td class="result">
-                               
-    
-        
-
-      </td>
-</tr>
-              <tr>
-          <td colspan="3" class="group">com.nopcommerce.cookies.Product</td>
-        </tr>
-                
-<tr>
-  <td class="method">
-                  afterClass
-      </td>
-  <td class="duration">
-    0.000s
-  </td>
-  <td class="result">
-                               
-    
-        
-
-      </td>
-</tr>
-            </table>
-
-
-
-  <table class="resultsTable" width="100%">
-    <tr><th colspan="3" class="header skipped">Skipped Tests</th></tr>
-          <tr>
-        <td colspan="3" class="group">com.nopcommerce.cookies.Payment</td>
-      </tr>
-            
-<tr>
-  <td class="method">
-                  Product_01_Visa
-      </td>
-  <td class="duration">
-    0.000s
-  </td>
-  <td class="result">
-                               
-    
-        
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  Product_02_Cheque
-      </td>
-  <td class="duration">
-    0.000s
-  </td>
-  <td class="result">
-                               
-    
-        
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  Product_03_Paypal
-      </td>
-  <td class="duration">
-    0.000s
-  </td>
-  <td class="result">
-                               
-    
-        
-
-      </td>
-</tr>
-          <tr>
-        <td colspan="3" class="group">com.nopcommerce.cookies.Product</td>
-      </tr>
-            
-<tr>
-  <td class="method">
-                  Product_01_New_Product
-      </td>
-  <td class="duration">
-    0.001s
-  </td>
-  <td class="result">
-                               
-    
-        
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  Product_02_View_Product
-      </td>
-  <td class="duration">
-    0.000s
-  </td>
-  <td class="result">
-                               
-    
-        
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  Product_03_Edit_Product
-      </td>
-  <td class="duration">
-    0.000s
-  </td>
-  <td class="result">
-                               
-    
-        
-
       </td>
 </tr>
       </table>
+
 
   
 </body>
