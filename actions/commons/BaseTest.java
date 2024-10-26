@@ -2,8 +2,6 @@ package commons;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -46,6 +44,50 @@ public class BaseTest {
         driver.manage().window().maximize();
         driver.get(url);
         return driver;
+    }
+
+    protected WebDriver getBrowserEnvironment(String browserName, String serverName){
+        BrowserList browser = BrowserList.valueOf(browserName.toUpperCase());
+        if (browser == BrowserList.FIREFOX){
+            driver = new FirefoxDriver();
+        } else if (browser == BrowserList.CHROME){
+            driver = new ChromeDriver();
+        } else if (browser == BrowserList.EDGE) {
+            driver = new EdgeDriver();
+        } else {
+            throw new RuntimeException("Browser name is not valid");
+        }
+
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        /* setSize để test reponsive cũng được
+        driver.manage().window().setPosition(new Point(0,0));
+        driver.manage().window().setSize(new Dimension(720,720));
+        */
+        driver.manage().window().maximize();
+        driver.get(getUrlByServer(serverName));
+        return driver;
+    }
+
+    private String getUrlByServer (String serverName){
+        String url = null;
+        ServerList server = ServerList.valueOf(serverName.toUpperCase());
+        switch (server){
+            case DEV:
+                url = "https://dev.nopcommerce.com";
+                break;
+
+            case TEST:
+                url = "https://test.nopcommerce.com";
+                break;
+
+            case STAGING:
+                url = "https://staging.nopcommerce.com";
+                break;
+
+            default:
+                new IllegalArgumentException("Unexpected value : " + serverName);
+        }
+        return url;
     }
 
     protected String getEmailRandom() {
