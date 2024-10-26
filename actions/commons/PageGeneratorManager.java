@@ -45,4 +45,8 @@ public class PageGeneratorManager {
     public static AdminDashboardPageObject getAdminDashboardPage (WebDriver driver){
         return new AdminDashboardPageObject(driver);
     }
+
+    public static SearchPageObject getSearchPage(WebDriver driver){
+        return new SearchPageObject(driver);
+    }
 }
