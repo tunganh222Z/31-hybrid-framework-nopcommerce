@@ -45,7 +45,7 @@ public class BaseTest {
         driver.get(url);
         return driver;
     }
-
+        // getEnvironment by severName in xml combined with getUrlByServer
     protected WebDriver getBrowserEnvironment(String browserName, String serverName){
         BrowserList browser = BrowserList.valueOf(browserName.toUpperCase());
         if (browser == BrowserList.FIREFOX){

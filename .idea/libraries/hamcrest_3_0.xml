@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="hamcrest-3.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libOwner/hamcrest-3.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libOwner/junit-jupiter-api-5.11.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libOwner/mockito-core-5.14.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libOwner/owner-1.0.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

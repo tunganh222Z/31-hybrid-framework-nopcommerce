@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite parallel = "classes" name="NopComerce">
+
+    <listeners>
+        <listener class-name="commons.MethodListener"/>
+<!--        <listener class-name="org.uncommons.reportng.HTMLReporter"/>-->
+<!--        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>-->
+<!--        <listener class-name="reportConfig.ReportNGListener"/>-->
+    </listeners>
+    <parameter name="browser" value="firefox"/>
+    <parameter name="server" value="testing"/>
+    <test name="Run on Firefox">
+            <classes>
+                <class name="com.nopcommerce.account.Level32_Environment_Owner_04"/>
+            </classes>
+    </test>
+
+</suite>

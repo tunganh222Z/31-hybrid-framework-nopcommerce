@@ -10,6 +10,7 @@
       <sourceFolder url="file://$MODULE_DIR$/javaBasic" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/assertVerify" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/testdata" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/environmentConfig" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -25,5 +26,6 @@
     <orderEntry type="library" name="jackson-annotations-2.17.2" level="project" />
     <orderEntry type="library" name="log4j-api-2.23.1" level="project" />
     <orderEntry type="library" name="log4j-api-2.23.1 (2)" level="project" />
+    <orderEntry type="library" name="hamcrest-3.0" level="project" />
   </component>
 </module>

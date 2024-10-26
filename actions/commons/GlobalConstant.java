@@ -22,4 +22,6 @@ public class GlobalConstant {
 
     public static final long LONG_TIMEOUT = 5;
     public static final long SHORT_TIMEOUT = 30;
+
+    public static final String ENVIRONMENT_CONFIG_PATH = RELATIVE_PROJECT_PATH + File.separator + "environmentConfig" + File.separator;
 }
