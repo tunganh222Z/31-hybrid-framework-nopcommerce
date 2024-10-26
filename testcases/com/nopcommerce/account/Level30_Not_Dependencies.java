@@ -19,7 +19,7 @@ public class Level30_Not_Dependencies extends BaseTest {
     private String adminURL, userURL;
     private AdminLoginPageObject adminLoginPage;
     private AdminDashboardPageObject adminDashboardPage;
-    private SearchPageObject searchPage
+    private SearchPageObject searchPage;
 
 
     @Parameters({"browser", "adminURL", "userURL"})
@@ -46,14 +46,14 @@ public class Level30_Not_Dependencies extends BaseTest {
 
     }
 
-    @Test
+    @Test (priority = 0)
     public void shouldBeSearchByProductNotExisting() {
 
         searchPage = homePage.clickToSearchLink();
 
     }
 
-    @Test
+    @Test(priority = 1)
     public void shouldBeSearchByContainsProductName() {
 
         searchPage = homePage.clickToSearchLink();

@@ -41,3 +41,5 @@ Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Command: [16886631-cd4f-44de-87a8-05e01a30e061, deleteAllCookies {}]
 Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 131.0.3, moz:accessibilityChecks: false, moz:buildID: 20241011205646, moz:debuggerAddress: 127.0.0.1:38400, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 27208, moz:profile: C:\Users\TugAh\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:38400/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
 Session ID: 16886631-cd4f-44de-87a8-05e01a30e061
+[26-10-2024 17:50:46.704 INFO com.saucelab.sort.Level31_Sort_ASC_DESC] - OS name = windows 11
+[26-10-2024 17:50:46.709 INFO com.saucelab.sort.Level31_Sort_ASC_DESC] - Driver instance name = firefoxdriver: firefox on windows (903fa46a-ed1c-4a03-8d63-37832bbc8d5a)
