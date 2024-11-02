@@ -46,11 +46,14 @@ public class Level21_Pattern_Object extends BaseTest {
 
         homePage.clickToHeaderLinksByName("Register");
         registerPage = PageGeneratorManager.getRegisterPage(driver);
-
+        log.info("Step click register button");
         registerPage.clickToRegisterButton();
 
-        Assert.assertEquals(registerPage.getErrorMsgByID("FirstName"), "First name is required.");
-        Assert.assertEquals(registerPage.getErrorMsgByID("LastName"), "Last name is required.");
+        log.info("step verify firstname error msg");
+        verifyEqual(registerPage.getErrorMsgByID("FirstName"), "First name is required.xx");
+
+        log.info("step verify lastname error msg");
+        verifyEqual(registerPage.getErrorMsgByID("LastName"), "Last name is required.xx");
         Assert.assertEquals(registerPage.getErrorMsgByID("Email"), "Email is required.");
         Assert.assertEquals(registerPage.getErrorMsgByID("ConfirmPassword"), "Password is required.");
 
@@ -96,6 +99,7 @@ public class Level21_Pattern_Object extends BaseTest {
 
     @Test
     public void User_04_Register_Incorrect_Confirm_Password() {
+
         homePage = registerPage.clickToNopcommerceLogo();
 
         homePage.clickToHeaderLinksByName("Register");

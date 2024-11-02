@@ -43,3 +43,92 @@ Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 1
 Session ID: 16886631-cd4f-44de-87a8-05e01a30e061
 [26-10-2024 17:50:46.704 INFO com.saucelab.sort.Level31_Sort_ASC_DESC] - OS name = windows 11
 [26-10-2024 17:50:46.709 INFO com.saucelab.sort.Level31_Sort_ASC_DESC] - Driver instance name = firefoxdriver: firefox on windows (903fa46a-ed1c-4a03-8d63-37832bbc8d5a)
+[01-11-2024 19:48:52.308 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 01: Open Register page
+[01-11-2024 19:48:52.480 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 02: Click to Register button
+[01-11-2024 19:48:52.788 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 03: Verify first name error msg
+[01-11-2024 19:48:52.920 INFO com.nopcommerce.account.Level15_Assert_Verify] - OS name = windows 11
+[01-11-2024 19:48:52.921 INFO com.nopcommerce.account.Level15_Assert_Verify] - Driver instance name = firefoxdriver: firefox on windows (acd67598-2fa3-4759-a3ef-d10e545cdeab)
+[01-11-2024 22:11:50.409 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 01: Open Register page
+[01-11-2024 22:11:50.565 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 02: Click to Register button
+[01-11-2024 22:11:50.869 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 03: Verify first name error msg
+[01-11-2024 22:11:50.968 INFO com.nopcommerce.account.Level15_Assert_Verify] - OS name = windows 11
+[01-11-2024 22:11:50.969 INFO com.nopcommerce.account.Level15_Assert_Verify] - Driver instance name = firefoxdriver: firefox on windows (d362e5cf-d08e-499e-8dd9-eba36309e9a7)
+[01-11-2024 23:13:52.700 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 01: Open Register page
+[01-11-2024 23:13:52.846 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 02: Click to Register button
+[01-11-2024 23:13:53.140 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 03: Verify first name error msg
+[01-11-2024 23:13:53.171 INFO com.nopcommerce.account.Level15_Assert_Verify] - ------------Fail------------
+[01-11-2024 23:13:53.171 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 04: Verify LastName error msg
+[01-11-2024 23:13:53.249 INFO com.nopcommerce.account.Level15_Assert_Verify] - OS name = windows 11
+[01-11-2024 23:13:53.249 INFO com.nopcommerce.account.Level15_Assert_Verify] - Driver instance name = firefoxdriver: firefox on windows (eed57ed5-6a32-4237-8a48-5a84bf571c06)
+[01-11-2024 23:16:06.390 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 01: Open Register page
+[01-11-2024 23:16:06.587 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 02: Click to Register button
+[01-11-2024 23:16:06.882 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 03: Verify first name error msg
+[01-11-2024 23:16:06.916 INFO com.nopcommerce.account.Level15_Assert_Verify] - ------------Fail------------
+[01-11-2024 23:16:06.970 INFO com.nopcommerce.account.Level15_Assert_Verify] - OS name = windows 11
+[01-11-2024 23:16:06.970 INFO com.nopcommerce.account.Level15_Assert_Verify] - Driver instance name = firefoxdriver: firefox on windows (d1b508fe-8b08-4bd7-b379-8d1d90cb93be)
+[01-11-2024 23:22:24.466 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 01: Open Register page
+[01-11-2024 23:22:24.633 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 02: Click to Register button
+[01-11-2024 23:22:24.976 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 03: Verify first name error msg
+[01-11-2024 23:22:25.016 INFO com.nopcommerce.account.Level15_Assert_Verify] - OS name = windows 11
+[01-11-2024 23:22:25.016 INFO com.nopcommerce.account.Level15_Assert_Verify] - Driver instance name = firefoxdriver: firefox on windows (c71fb439-bfb8-4274-85f4-4fe3a6fb5bea)
+[01-11-2024 23:23:31.899 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 01: Open Register page
+[01-11-2024 23:23:32.064 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 02: Click to Register button
+[01-11-2024 23:23:32.396 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 03: Verify first name error msg
+[01-11-2024 23:23:32.430 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 04: Verify LastName error msg
+[01-11-2024 23:23:32.507 INFO com.nopcommerce.account.Level15_Assert_Verify] - OS name = windows 11
+[01-11-2024 23:23:32.507 INFO com.nopcommerce.account.Level15_Assert_Verify] - Driver instance name = firefoxdriver: firefox on windows (39966c6a-88b3-4816-964a-e6482f422fe3)
+[01-11-2024 23:27:09.649 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 01: Open Register page
+[01-11-2024 23:27:09.816 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 02: Click to Register button
+[01-11-2024 23:27:10.108 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 03: Verify first name error msg
+[01-11-2024 23:27:10.211 INFO com.nopcommerce.account.Level15_Assert_Verify] - OS name = windows 11
+[01-11-2024 23:27:10.211 INFO com.nopcommerce.account.Level15_Assert_Verify] - Driver instance name = firefoxdriver: firefox on windows (225e367b-2514-4831-a4cf-64fec6b3f2f9)
+[01-11-2024 23:37:00.858 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 01: Open Register page
+[01-11-2024 23:37:01.031 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 02: Click to Register button
+[01-11-2024 23:37:01.328 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 03: Verify first name error msg
+[01-11-2024 23:37:01.365 INFO com.nopcommerce.account.Level15_Assert_Verify] - ------------Fail------------
+[01-11-2024 23:37:01.420 INFO com.nopcommerce.account.Level15_Assert_Verify] - OS name = windows 11
+[01-11-2024 23:37:01.421 INFO com.nopcommerce.account.Level15_Assert_Verify] - Driver instance name = firefoxdriver: firefox on windows (9db0fafa-0da7-4ca2-8bd7-afc34d36ab61)
+[01-11-2024 23:45:42.352 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 01: Open Register page
+[01-11-2024 23:45:42.511 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 02: Click to Register button
+[01-11-2024 23:45:42.806 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 03: Verify first name error msg
+[01-11-2024 23:45:42.839 INFO com.nopcommerce.account.Level15_Assert_Verify] - ------------Fail------------
+[01-11-2024 23:45:42.893 INFO com.nopcommerce.account.Level15_Assert_Verify] - OS name = windows 11
+[01-11-2024 23:45:42.894 INFO com.nopcommerce.account.Level15_Assert_Verify] - Driver instance name = firefoxdriver: firefox on windows (53f6624d-7a9e-453f-9069-9c2949170831)
+[02-11-2024 00:07:16.437 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 01: Open Register page
+[02-11-2024 00:07:16.597 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 02: Click to Register button
+[02-11-2024 00:07:16.894 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 03: Verify first name error msg
+[02-11-2024 00:07:16.944 INFO com.nopcommerce.account.Level15_Assert_Verify] - ------------Fail------------
+[02-11-2024 00:07:16.945 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 04: Verify LastName error msg
+[02-11-2024 00:07:16.978 INFO com.nopcommerce.account.Level15_Assert_Verify] - ------------Fail------------
+[02-11-2024 00:07:16.979 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 05: Verify Email error msg
+[02-11-2024 00:07:17.005 INFO com.nopcommerce.account.Level15_Assert_Verify] - ------------Passed------------
+[02-11-2024 00:07:17.082 INFO com.nopcommerce.account.Level15_Assert_Verify] - OS name = windows 11
+[02-11-2024 00:07:17.083 INFO com.nopcommerce.account.Level15_Assert_Verify] - Driver instance name = firefoxdriver: firefox on windows (782d3392-fcc3-47fc-960d-7427323e2012)
+[02-11-2024 00:11:15.143 INFO com.nopcommerce.account.Level21_Pattern_Object] - ------------Fail------------
+[02-11-2024 00:11:15.173 INFO com.nopcommerce.account.Level21_Pattern_Object] - ------------Fail------------
+[02-11-2024 00:11:19.719 INFO com.nopcommerce.account.Level21_Pattern_Object] - OS name = windows 11
+[02-11-2024 00:11:19.719 INFO com.nopcommerce.account.Level21_Pattern_Object] - Driver instance name = firefoxdriver: firefox on windows (683ba85d-4aab-4623-8189-8f95607e9966)
+[02-11-2024 00:14:15.892 INFO com.nopcommerce.account.Level21_Pattern_Object] - Step click register button
+[02-11-2024 00:14:16.214 INFO com.nopcommerce.account.Level21_Pattern_Object] - step verify firstname error msg
+[02-11-2024 00:14:16.249 INFO com.nopcommerce.account.Level21_Pattern_Object] - ------------Fail------------
+[02-11-2024 00:14:16.249 INFO com.nopcommerce.account.Level21_Pattern_Object] - step verify lastname error msg
+[02-11-2024 00:14:16.277 INFO com.nopcommerce.account.Level21_Pattern_Object] - ------------Fail------------
+[02-11-2024 00:14:20.987 INFO com.nopcommerce.account.Level21_Pattern_Object] - OS name = windows 11
+[02-11-2024 00:14:20.988 INFO com.nopcommerce.account.Level21_Pattern_Object] - Driver instance name = firefoxdriver: firefox on windows (3708f3a8-abee-4b59-9bd3-b500d18136f1)
+[02-11-2024 00:28:40.991 INFO com.nopcommerce.account.Level21_Pattern_Object] - Step click register button
+[02-11-2024 00:28:41.345 INFO com.nopcommerce.account.Level21_Pattern_Object] - step verify firstname error msg
+[02-11-2024 00:28:41.377 INFO com.nopcommerce.account.Level21_Pattern_Object] - ------------Fail------------
+[02-11-2024 00:28:41.377 INFO com.nopcommerce.account.Level21_Pattern_Object] - step verify lastname error msg
+[02-11-2024 00:28:41.401 INFO com.nopcommerce.account.Level21_Pattern_Object] - ------------Fail------------
+[02-11-2024 00:28:46.277 INFO com.nopcommerce.account.Level21_Pattern_Object] - OS name = windows 11
+[02-11-2024 00:28:46.277 INFO com.nopcommerce.account.Level21_Pattern_Object] - Driver instance name = firefoxdriver: firefox on windows (861479bc-7f5c-4839-a75f-747fae28c5e3)
+[02-11-2024 00:32:48.818 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 01: Open Register page
+[02-11-2024 00:32:48.994 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 02: Click to Register button
+[02-11-2024 00:32:49.288 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 03: Verify first name error msg
+[02-11-2024 00:32:49.321 INFO com.nopcommerce.account.Level15_Assert_Verify] - ------------Fail------------
+[02-11-2024 00:32:49.321 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 04: Verify LastName error msg
+[02-11-2024 00:32:49.348 INFO com.nopcommerce.account.Level15_Assert_Verify] - ------------Fail------------
+[02-11-2024 00:32:49.348 INFO com.nopcommerce.account.Level15_Assert_Verify] - User_01_Register_Empty_Data - STEP 05: Verify Email error msg
+[02-11-2024 00:32:49.379 INFO com.nopcommerce.account.Level15_Assert_Verify] - ------------Passed------------
+[02-11-2024 00:32:49.468 INFO com.nopcommerce.account.Level15_Assert_Verify] - OS name = windows 11
+[02-11-2024 00:32:49.468 INFO com.nopcommerce.account.Level15_Assert_Verify] - Driver instance name = firefoxdriver: firefox on windows (01b820c0-e834-4b40-88f7-e618bc65a0d7)

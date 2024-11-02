@@ -8,6 +8,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 import pageObjects.nopcommerce.admin.AdminDashboardPageObject;
 import pageObjects.nopcommerce.admin.AdminLoginPageObject;
 import pageObjects.nopcommerce.user.*;
@@ -43,6 +44,8 @@ public class Level15_Assert_Verify extends BaseTest {
     @Test
     public void User_01_Register_Empty_Data() {
 
+
+
         registerPage = homePage.clickToRegisterLink();
 
         log.info("User_01_Register_Empty_Data - STEP 01: Open Register page");
@@ -55,16 +58,16 @@ public class Level15_Assert_Verify extends BaseTest {
         registerPage.clickToRegisterButton();
 
         log.info("User_01_Register_Empty_Data - STEP 03: Verify first name error msg");
-        Assert.assertEquals(registerPage.getFirstNameErrorMsgText(), "First NAME is required.");
+        verifyEqual(registerPage.getFirstNameErrorMsgText(), "First NAME is required.");
+        System.out.println("123123123");
 
         log.info("User_01_Register_Empty_Data - STEP 04: Verify LastName error msg");
-        Assert.assertEquals(registerPage.getLastNameErrorMsgText(), "Last name is requir3ed.");
+        verifyEqual(registerPage.getLastNameErrorMsgText(), "Last name is requir3ed.");
 
         log.info("User_01_Register_Empty_Data - STEP 05: Verify Email error msg");
-        Assert.assertEquals(registerPage.getEmailErrorMsgText(), "Email is required.");
+        verifyEqual(registerPage.getEmailErrorMsgText(), "Email is required.");
 
         Assert.assertEquals(registerPage.getConfirmPasswordErrorMsgText(), "Password is required.");
-
 
     }
 

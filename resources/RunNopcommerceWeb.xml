@@ -12,7 +12,6 @@
 
     <test name="Run on Firefox" preserve-order="true">
         <parameter name="browser" value="firefox"/>
-
             <classes>
                 <class name="com.nopcommerce.account.Level32_Environment_01"/>
             </classes>
